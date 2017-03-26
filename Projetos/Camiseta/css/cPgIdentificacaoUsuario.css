@@ -1,0 +1,344 @@
+/*******************************************************************
+********************************************************************
+  Nome: cIdentificacaoUsuario.css
+  Função: página css da pgIdentificacaoUsuario.php
+  Data de Criação: 14/02/2011 - 10:44
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+*******************************************************************/
+
+/*div principal*/
+.divPrincIdentificacaoUsuario{
+    float:left;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/***********************************************************************************
+*********************************** realizar login *********************************
+***********************************************************************************/
+.divLoginUsuario{
+    display: block;
+    float:left;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.divLinhaLoginUsuario{
+    display: block;
+    border: 0px;
+    width: 100%;
+    height: 33%;
+}
+#divLinhaLoginUsuario1{
+    height: 20%;
+}
+
+.spnTituloLogin{
+    float: left;
+    border: 0px;
+    margin-left: 3%;
+    margin-top: 1%;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: 700;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+.spnValorLogin{
+    float: left;
+    border: 0px;
+    margin-left: 3%;
+    margin-top: 1%;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: 700;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+.lnkFinalizarCompra{
+    float: left;
+    display: block;
+    margin-left: 10px;
+    font-size: 11px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: normal;
+}
+.lnkFinalizarCompra:link{
+    text-decoration: none;
+}
+.lnkFinalizarCompra:visited{
+    text-decoration: none;
+}
+.lnkFinalizarCompra:hover{
+    text-decoration: underline;
+    color: #FF0000;
+}
+.lnkFinalizarCompra:active{
+    text-decoration: none;
+}
+
+#spnTituloLoginUsuario, #spnTituloLoginSenha{
+    margin-top: 2%;
+}
+
+.txtValorItemLogin{
+    background: transparent;
+    float: left;
+    width: 80px;
+    margin: 0%;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: 700;
+    font-variant: normal;
+    text-transform: lowercase;
+}
+
+.lnkRealizarLogin{
+    float: left;
+    display: block;
+    width: 10%;
+    height: 60%;
+    border: 0px;
+    margin-left: 3%;
+    margin-top: 1%;
+
+}
+.lnkRealizarLogin:link, .lnkRealizarLogin:visited, .lnkRealizarLogin:active{
+    text-decoration: none;
+}
+.lnkRealizarLogin:hover{
+    text-decoration: none;
+}
+
+.imgRealizarLogin{
+    float: left;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+}
+
+.lnkRecuperarSenha{
+    float: left;
+    display: block;
+    margin-left: 3%;
+    margin-top: 1%;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-size: 12px;
+    color: green;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: normal;
+}
+.lnkRecuperarSenha:link, .lnkRecuperarSenha:visited, .lnkRecuperarSenha:active{
+    text-decoration: none;
+}
+.lnkRecuperarSenha:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+.lnkCadastroUsuario{
+    float: right;
+    margin-left: 8%;
+    margin-top: 1%;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-size: 12px;
+    color: green;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: normal;
+}
+.lnkCadastroUsuario:link, .lnkCadastroUsuario:visited, .lnkCadastroUsuario:active{
+    text-decoration: none;
+}
+.lnkCadastroUsuario:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+/***********************************************************************************
+************************* janela modal para recuperar senha ************************
+***********************************************************************************/
+.spnTituloEsqueciMinhaSenha{
+    border: 0px;
+    margin-left: 2%;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.spnTituloOpcRecuperarSenha{
+    /*width: 40px;*/
+    border: 0px;
+    margin-left: 2%;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: 700;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+.txtValorOpcRecuperarSenha{
+    background:transparent;
+    margin-left: 1%;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: lowercase;
+}
+#txtValorOpcRecuperarSenhaLogin{
+    width: 200px;
+}
+#txtValorOpcRecuperarSenhaEmail{
+    width: 500px;
+}
+
+.btnRecuperarSenha{
+    float: left;
+    background-color: #234;
+    border: 1px solid;
+    width: 100px;
+    height: 30px;
+    margin-left: 2%;
+    margin-top: 2%;
+    color: black;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: 700;
+}
+.btnRecuperarSenha:hover {
+    background-color: #567;
+    cursor: pointer;
+    }
+
+.imgRecuperarSenhaProcessando{
+    display: none;
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.fsetOpcoes{
+    font-size: 14px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: 700;
+}
+/* fim - recuperar senha */
+/* fim - realizar login */
+
+/***********************************************************************************
+*********************************** usuário logado *********************************
+***********************************************************************************/
+.divUsuarioLogado{
+    display: none;
+    float:left;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+}
+
+.divLinhaUsuarioLogado{
+    display: block;
+    border: 0px;
+    width: 100%;
+    height: 33%;
+}
+#divLinhaUsuarioLogado1{
+    height: 20%;
+}
+
+.spnTituloLogado{
+    float: left;
+    display: block;
+    border: 0px;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: bold;
+}
+
+.spnValorLogado{
+    float: left;
+    display: block;
+    border: 0px;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: bold;
+}
+
+.lnkLogoff{
+    float: left;
+    display: block;
+    margin-top: 1%;
+    margin-left: 3%;
+    font-size: 11px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+}
+.lnkLogoff:link{ /*define o estilo do link no estado inicial*/
+    text-decoration: none;
+}
+.lnkLogoff:visited{ /*define o estilo do link visitad*/
+    text-decoration: none;
+}
+.lnkLogoff:hover{ /*define o estilo do link quando passa-se o mouse sobre ele*/
+    text-decoration: underline;
+    color: #FF0000;
+}
+.lnkLogoff:active{ /*define o estilo do link ativo (o que foi clicado).*/
+    text-decoration: none;
+}
+
+.imgFiguraCarrinho{
+    float: left;
+    width: 10%;
+    height: 60%;
+    border: 0px;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+#spnTituloLogadoCarrinhoCompras{
+    margin-top: 3%;
+    font-weight: normal;
+}
+#spnValorLogadoCarrinhoCompras{
+    margin-top: 3%;
+    font-weight: normal;
+}
+
+#lnkFinalizarCompraUsuarioLogado{
+    margin-top: 3%;
+}
+
+.lnkMeuCadastro{
+    float: left;
+    display: block;
+    margin-top: 3%;
+    margin-left: 2%;
+    font-size: 11px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+}
+.lnkMeuCadastro:link, .lnkMeuCadastro:visited, .lnkMeuCadastro:active{
+    text-decoration: none;
+}
+.lnkMeuCadastro:hover{
+    text-decoration: underline;
+    color: #FF0000;
+}
+/* fim - usuário logado */

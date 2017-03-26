@@ -1,0 +1,141 @@
+    body{
+       overflow-y: hidden;
+       background-repeat: repeat-y;
+       background-color: #FFFFFF;
+       background-position: center;
+       background-image:url(fundo.png);
+       margin-top: 0;
+    }
+
+    div.grupoOpc{
+       position: absolute;
+       float: left;
+       width: 840px;
+       height: 504px;
+       margin: 0px;
+       margin-top: 2px;
+       margin-left: 211px;
+       /*border: 1px solid;*/
+       border: 0px solid;
+    }
+    
+    div.grupoDados{
+      position: relative;
+      margin: 0px;
+      width: 700px;
+      margin: 0px;
+      margin-top: 50px;
+      margin-left: 50px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    div.grupoOpcBotoes{
+      position: relative;
+      width: 700px;
+   	  height: 40px;
+      margin: 0px;
+      margin-top: 50px;
+      margin-left: 50px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    p.titulo{
+      position: relative;
+      text-align: center;
+      width: 430px;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0px;
+      margin-top: 50px;
+      margin-left: 180px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    span.tituloCampo{
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      float: left;
+      margin: 0px;
+      margin-left: 12px;
+      margin-top: 8px;
+      border: 0px solid;
+    }
+    
+    select.slctTipo{
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 12px;
+      margin: 0px;
+      margin-left: 40px;
+      margin-top: 8px;
+    }
+
+    textarea.txtAreDescricao{
+      color: #000000;
+      width: 500px;
+      height: 100px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 12px;
+      margin: 0px;
+      margin-left: 2px;
+      margin-top: 8px;
+    }
+    
+  a.lnkInserir{
+		border-color: #999 #000 #000 #999; /* bordas esquerda,top,direita,base */
+		position: relative;
+		border: 1px solid;
+		width: 150px;
+		height: 12px;
+		margin: 0px;
+		margin-left: 230px;
+		padding: 11px 15px;
+		background: #00CE67;
+		color: #000;
+		font-family: Verdana;
+		font-size: 11px;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+    }
+
+  a.lnkInserir:hover	{
+		position: relative;
+		top: 1px;
+		left: 1px;
+		border-color: #000 #999 #999 #000;
+		background: #0DFF86;
+  }
+
+  a.lnkLimpar{
+		border-color: #999 #000 #000 #999; /* bordas esquerda,top,direita,base */
+		position: relative;
+		border: 1px solid;
+		width: 150px;
+		height: 30px;
+		margin: 0px;
+		padding: 10px 14px;
+		background: #00F078;
+		color: #000;
+		font-family: Verdana;
+		font-size: 11px;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		margin-left: 60px;
+  }
+
+  a.lnkLimpar:hover	{
+		position: relative;
+		top: 1px;
+		left: 1px;
+		border-color: #000 #999 #999 #000;
+		background: #0DFF86;
+  }

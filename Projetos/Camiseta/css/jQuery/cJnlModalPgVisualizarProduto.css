@@ -1,0 +1,62 @@
+/*
+  Nome: janelaModal.css
+  Função: página css da pgVisualizarProduto.php, referente ao plugin jQuery para janela modal
+  Data de Criação: 23/03/2011 - 15:12
+  Data de Atualização: -
+  Desenvolvido por: http://www.oficinadanet.com.br/artigo/javascript/efeito_modal_com_jquery?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+oficinadanet_rss+(Oficina+da+Net+-+Feed)
+*/
+
+
+#mask {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+}
+
+
+#boxes .window {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 440px;
+    height: 200px;
+    display: none;
+    z-index: 9999;
+    padding: 20px;
+}
+
+
+#boxes .dialog {
+    width: 680px;
+    height: 185px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+
+.close{
+    display: block;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-size: 14px;
+    color: green;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: normal;
+    text-align:right;
+}
+.close:link{
+    text-decoration: none;
+}
+.close:visited{
+    text-decoration: none;
+}
+.close:hover{
+    text-decoration: underline;
+    color: red;
+}
+.close:active{
+    text-decoration: none;
+}

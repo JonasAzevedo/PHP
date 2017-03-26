@@ -1,0 +1,171 @@
+    html { /*mostrar barra de rolagem no Firefox*/
+       overflow: -moz-scrollbars-vertical;
+    }
+
+    body{
+       overflow-y: hidden;
+       background-repeat: repeat-y;
+       background-color: #FFFFFF;
+       background-position: center;
+       background-image:url(fundo.png);
+       margin-top: 0;
+    }
+
+    div.grupoDadosUsuario{
+      position: relative;
+      width: 830px;
+      height: 42px;
+      margin: 0px;
+      margin-top: 10px;
+      margin-left: 215px;
+      /*border: 2px groove;*/
+      border: 0px groove;*/
+    }
+    
+    div.grupoCalendarioGrafico{
+      position: relative;
+      float: left;
+      width: 360px;
+      height: 460px;
+      margin: 0px;
+      margin-top: 10px;
+      margin-left: 215px;
+      /*border: 1px solid;*/
+      border: 0px solid;*/
+    }
+    
+    div.grupoGrafico{
+      position: relative;
+      float: left;
+      margin: 0px;
+      margin-top: 2px;
+      margin-left: 0px;
+      /*border: 1px solid;*/
+      border: 0px solid;*/
+    }
+    
+    div.grupoOSs{
+      position: relative;
+      width: 460px;
+      height: 460px;
+      margin: 0px;
+      margin-top: 10px;
+      margin-left: 580px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    div.topoCalendario{
+      position: relative;
+      text-align: center;
+      height: 30px;
+      margin: 0px;
+      margin-top: 2px;
+      margin-left: 2px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    div.diaOS{
+      cursor: pointer;
+      color: blue;
+      font-weight:bold;
+    }
+    
+    span.saudacaoUsuario{
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 18px;
+      font-weight: 650;
+    }
+    
+    span.acesso{
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    a.lnkAjuda{
+      position: absolute;
+      margin: 0px;
+	  margin-left: 615px;
+	  margin-top: 5px;
+      font-family: verdana, helvetica, arial, sans-serif;
+	  font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    a.lnkAjuda:link {
+      text-decoration: none;
+      color          : #00FFFF;
+      font-size      : 16px;
+    }
+
+    a.lnkMes:link {
+      text-decoration: none;
+      color          : #0000FF;
+      font-size      : 16px;
+    }
+
+    a.lnkAjuda:active, a.lnkMes:active {
+      text-decoration: none;
+      font-size      : 16px;
+    }
+
+    a.lnkAjuda:visited, a.lnkMes:visited {
+      text-decoration: none;
+      color          : #808000;
+      font-size      : 16px;
+    }
+
+    a.lnkAjuda:hover, a.lnkMes:hover {
+      text-decoration: none;
+      color          : #008000;
+      font-size      : 16px;
+    }
+    
+    a.lnkMes{
+      position: relative;
+      margin: 0px;
+      font-family: verdana, helvetica, arial, sans-serif;
+	  font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    table.calendario {
+      width: 290px;
+      border: 1px;
+      font-family: arial, helvetica, sans-serif;
+      border-collapse: separate;
+      font-size: 14px;
+      margin: 0px;
+      margin-top: 5px;
+      margin-left: 30px;
+    }
+
+    table.calendario th {
+      border: 0px solid #000000;
+      font-family: arial, helvetica, sans-serif;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    
+    table.calendario tr td {
+      border:1px solid #000000;
+    }
+    
+    img.graficoAcompUsuario{
+      width: 350px;
+      height: 250px;
+    }
+    
+    img.iconeGrafico{
+      width: 25px;
+      height: 25px;
+    }

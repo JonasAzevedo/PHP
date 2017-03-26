@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS: Caixas com cantos arredondados e sombras</title>
+<link rel="stylesheet" title="Gold (right, fixed) + navbar"
+  href="estilos/threepart-f.css" media="screen, print, projection, tv" />
+<link rel="stylesheet" title="Handheld" href="estilos/handheld.css" media="handheld" />
+<style type="text/css">
+blockquote {
+    color: red;
+    padding: 1em;
+    margin: 1em 2em }
+.corner {
+    border: thick solid red;
+    border-radius: 1.5em }
+.shadow {
+    box-shadow: black 0.5em 0.5em 0.3em }
+.cornershadow {
+    border: thick solid red;
+    border-radius: 1.5em;
+    box-shadow: black 0.5em 0.5em 0.3em }
+p.author {
+    text-align: right }
+p.author::before {
+    content: "\2014\A0" }
+    
+    
+.bordasRedondaSombra{
+
+border: thick solid black;
+    border-radius: 1.5em;
+    box-shadow: green 0.5em 0.5em 0.3em }
+    
+</style>
+</head>
+<body>
+<h1> teste para cantos arredondados e sombra com CSS3</h1>
+
+<p>O texto em ingl&ecirc;s abaixo, dever&aacute; estar na cor vermelha com uma borda tamb&eacute;m vermelha com cantos arredondados. Se voc&ecirc; n&atilde;o est&aacute; vendo os cantos arredondados da borda, n&atilde;o se preocupe pois eles, a esta &eacute;poca (Janeiro de 2004 - Nota do tradutor: Dezembro de 2004) ainda est&atilde;o em fase de estudo para implementa&ccedil;&atilde;o na CSS3 e s&oacute; s&atilde;o visualizados em browsers experimentais.</p>
+<blockquote class="corner">
+<p>This is an uninteresting quote. But at least it is signed.</p>
+<p class="author">Anonymous</p>
+</blockquote>
+
+<p>E, o texto a seguir dever&aacute; apresentar uma sombra com raio de 0.3em  (blur radius 0.3em)
+deslocada cerca de  0.5em para baixo e para a direita da caixa do texto. Esta tamb&eacute;m &eacute; mais uma proposta para implementa&ccedil;&atilde;o na CSS3 e s&oacute;  visualizada em browsers experimentais.</p>
+<blockquote class="shadow">
+<p>This is an uninteresting quote. But at least it is signed.</p>
+
+<p class="author">Anonymous</p>
+</blockquote>
+
+<p>E para este terceiro texto h&aacute; uma combina&ccedil;&atilde;o de cantos arredondados na borda e sombra:</p>
+<blockquote class="cornershadow">
+<p>This is an uninteresting quote. But at least it is signed.</p>
+<p class="author">Anonymous</p>
+</blockquote>
+
+
+<div class="bordasRedondaSombra">
+<p>This is an uninteresting quote. But at least it is signed.</p>
+<p class="author">Anonymous</p>
+</div>
+
+</body>
+</html>

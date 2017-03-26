@@ -1,0 +1,73 @@
+/*******************************************************************
+********************************************************************
+  Nome: cPgProdutosDivsArredondads.css
+  Função: página css da pgProdutos.php, para deixar as div dos produtos com as bordas redondas
+  Data de Criação: 23/02/2011 - 10:58
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+********************************************************************/
+
+
+.divBordaBoxProdutos {
+  float:left;
+  bbackground: ttransparent;
+  /*width:10%;*/
+  width: 32%;
+  height: 30%;
+  margin-top: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 12px;
+}
+
+
+.divBordaBoxProdutos .b1, .divBordaBoxProdutos .b2, .divBordaBoxProdutos .b3,
+.divBordaBoxProdutos .b4, .divBordaBoxProdutos .b1b, .divBordaBoxProdutos .b2b,
+.divBordaBoxProdutos .b3b, .divBordaBoxProdutos .b4b {
+  display:block;
+  overflow:hidden;
+  font-size:1px;
+}
+
+
+.divBordaBoxProdutos .b1, .divBordaBoxProdutos .b2, .divBordaBoxProdutos .b3,
+.divBordaBoxProdutos .b1b, .divBordaBoxProdutos .b2b, .divBordaBoxProdutos .b3b{
+  height:1px;
+}
+
+
+.divBordaBoxProdutos .b2, .divBordaBoxProdutos .b3, .divBordaBoxProdutos .b4 {
+  /*background:#CECECE;*/
+  border-left:1px solid #456;
+  border-right:1px solid #456;
+}
+
+
+.divBordaBoxProdutos .b1 {
+  margin:0 5px;
+  background:#456;
+}
+
+
+.divBordaBoxProdutos .b2 {
+  margin:0 3px;
+  border-width:0 2px;
+}
+
+
+.divBordaBoxProdutos .b3 {
+  margin:0 2px;
+}
+
+
+.divBordaBoxProdutos .b4 {
+  height:2px;
+  margin:0 1px;
+}
+
+.divBordaBoxProdutos .divProduto {
+  display:block;
+  border-left:1px solid #111;
+  border-right:1px solid #111;
+}

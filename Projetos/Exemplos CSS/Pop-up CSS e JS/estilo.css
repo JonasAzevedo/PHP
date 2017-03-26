@@ -1,0 +1,14 @@
+/* cria a div pop-up*/
+#popup{
+    position: absolute; /*Define a posição absoluta da pop-up*/
+    top: 30%; /*Distancia da margem superior da página */
+    left: 30%; /*Distancia da margem esquerda da página */
+    width: 300px; /*Largura da pop-up*/
+    height: 100px; /*Altura da pop-up*/
+    padding: 20px 20px 20px 20px; /*Margem interna da pop-up*/
+    border-width: 1px; /*Largura da borda da pop-up*/
+    border-style: solid; /*Estilo da borda da pop-up*/
+    background: #ccc; /*Cor de fundo da pop-up*/
+    color: #000066; /*Cor do texto da pop-up*/
+    display: none; /* Estilo da pop-up*/
+}

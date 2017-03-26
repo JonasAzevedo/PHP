@@ -1,0 +1,349 @@
+<?php include("funcoes.php");
+
+if(!isset($_GET['ccto']) || !isset($_GET['filial'])){
+echo "Erro circuito não existe.";
+exit;
+}
+else {
+$ccto = $_GET['ccto'];
+$filial = $_GET['filial'];
+}
+
+
+
+if(!isset($_SESSION['log_tx'])) {
+echo "<script>";
+echo "alert(\"Voce precisa se autenticar no sistema para usufruir deste recurso.\");";
+echo "document.location.href = 'index.php';";
+echo "</script>";
+exit;
+}
+
+/* Swap Modificada */
+function swap(&$valor_1, &$valor_2, &$tr1 , &$tr2, &$com1, &$com2, &$tab1, &$tab2) {
+	list($valor_1, $valor_2) = array($valor_2, $valor_1);
+	list($tr1, $tr2) = array($tr2, $tr1);
+	list($com1, $com2) = array($com2, $com1);
+	list($tab1, $tab2) = array($tab2, $tab1);
+}
+
+function QualCom($int){
+	switch($int) {
+		case 1: $com = "Coment&aacute;rio"; break;
+		case 2: $com = "Objectel"; break;
+		case 3: $com = "Pend&ecirc;nciado"; break;
+		default: echo "Não foi determinado o código"; exit;
+	}
+	return $com;
+}
+
+function array_unique1(&$thearray) 
+{sort($thearray); 
+ reset($thearray); 
+
+ $newarray = array(); 
+ $i = 0; 
+
+ $element = current($thearray); 
+ for ($n=0;$n<sizeof($thearray);$n++) 
+ {if (next($thearray) != $element) 
+  {$newarray[$i] = $element; 
+   $element = current($thearray); 
+   $i++; 
+  } 
+ } 
+ $thearray = $newarray; 
+} 
+
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CPTX - Histórico</title>
+
+<script>
+var win = null;
+function NovaJanela(pagina,nome,w,h,scroll){
+	LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+	TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+	settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',status=0,toolbar=0,location=0,menubar=0';
+	window.open(pagina,nome,settings);
+}
+
+function pend(fil,ccto) {
+NovaJanela("cpend.php?ccto="+ccto+"&filial="+fil, "Pendência", '500' , '500' , "no");
+}
+function obj(fil,ccto) {
+NovaJanela("cobj.php?ccto="+ccto+"&filial="+fil, "Pendência", '500' , '500' , "no");
+}
+
+function reload(filial,ccto) {
+document.location.href= "cobj.php?ccto="+ccto+"&filial="+filial;
+}
+function fechar() {
+alert("Circuito Inexistente!");
+window.close();
+}
+
+</script>
+
+<style type="text/css">
+table.tab {
+border: none;
+}
+table.tab th {
+font-family:Arial, Helvetica, sans-serif;
+font-size:16px;
+}
+
+table.tab td tr {
+font-family:Arial, Helvetica, sans-serif;
+font-size: 12px;
+border: none;
+}
+table.com th {
+border: none;
+}
+
+table.com th {
+	font-size:14px;
+	border-bottom: 1px solid #000000;
+}
+table.com td {
+	font-size:12px;
+}
+.pendencia {
+cursor: pointer;
+}
+
+.style1 {
+font-size:14px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+</style>
+
+
+</head>
+<?php
+
+if(verificar_circ($filial,$ccto) == false) {
+	echo "<body onload='fechar();'>";
+	exit;
+}
+else {
+	echo "<body>";
+}
+
+$x = 0;
+
+
+
+
+$parar = true;
+if(ver_com($filial,$ccto) == true) {
+	$parar = false;
+	$con = conectar();
+	$query = mysql_query("SELECT* FROM `comentarios` WHERE `n_circ` = '$ccto' and `filial` = '$filial'");
+	mysql_close($con);
+	while($row = mysql_fetch_array($query)) {
+	$Data[$x] = $row['data_c'];
+	$Tr[$x] = $row['tr'];
+	$Com[$x] = $row['comentario'];
+	$Tab[$x] = '1';
+	$x++;
+	}
+}
+if(ver_obj($filial,$ccto) == true) {
+	$parar = false;
+	$con = conectar();
+	$query = mysql_query("SELECT* FROM `objectel` WHERE `n_circ` = '$ccto' and `filial` = '$filial'");
+	mysql_close($con);
+	ver_mysql($query);
+	while($row = mysql_fetch_array($query)) {
+	$Data[$x] = $row['data_e'];
+	$Tr[$x] = $row['tr'];
+	$Com[$x] = $row['relatorio'];
+	$Tab[$x] = '2';
+	$x++;
+	}
+}
+
+
+if(ver_pen($filial,$ccto) == true) {
+	$parar = false;
+	$con = conectar();
+	$query = mysql_query("SELECT* FROM `pendencias` WHERE `n_circ` = '$ccto' and `filial` = '$filial'");
+	mysql_close($con);
+	while($row = mysql_fetch_array($query)) {
+	$Data[$x] = $row['data_e'];
+	$Tr[$x] = $row['tr'];
+	$Com[$x] = $row['pendencia'];
+	$Tab[$x] = '3';
+	$x++;
+	}
+	mysql_free_result($query);
+}
+if($parar == true) {
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<span class='style1'><center>Não consta Comentário, Pendência ou algum status do Objectel para este circuito.</center>";
+echo "<br>";
+echo "<br>";
+echo "<center>Clique abaixo para definir um status do Objectel...</center>";
+echo "<br>";
+echo "<center><input type='button' onclick='reload(\"$filial\",\"$ccto\");' value='Definir Status'></center></span>";
+exit;
+}
+
+echo "<table width='650' border='0' align='center' class='tab'>";
+echo "<tr>";
+echo "<th width='650' colspan='2' height='39' scope='col'>Hist&oacute;rico</th>";
+echo "</tr>";
+echo "<tr>";
+echo "<td colspan='2' height='23' scope='col'>&nbsp;</td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td colspan='2' height='125' scope='col'>";
+
+ 
+
+$arrToSort = $Data;
+        
+/* a BOLHA! ;-) */
+  for ($i = 0; $i < count($Data); $i++) {
+    for ($j = $i; $j < count($Data); $j++) {
+      if ($Data[$i] > $Data[$j]) {
+       swap($Data[$i], $Data[$j], $Tr[$i], $Tr[$j], $Com[$i], $Com[$j], $Tab[$i], $Tab[$j]);
+      }
+    }
+  }
+
+$Data = array_reverse($Data);
+$Tr = array_reverse($Tr);
+$Com = array_reverse($Com);
+$Tab = array_reverse($Tab);
+$un_Data = array_unique($Data);
+
+foreach($un_Data as $data) {
+
+$i=0;
+$Tr2 = null;
+$con = conectar();
+$query = mysql_query("SELECT* FROM `comentarios` WHERE `n_circ` = '$ccto' and `filial` = '$filial' and `data_c` = '$data'");
+ver_mysql($query);
+while($row = mysql_fetch_array($query)) {
+$Tr1[$i] = $row['tr'];
+$i++;
+}
+$query = mysql_query("SELECT* FROM `objectel` WHERE `n_circ` = '$ccto' and `filial` = '$filial' and `data_e` = '$data'");
+ver_mysql($query);
+while($row = mysql_fetch_array($query)) {
+$Tr1[$i] = $row['tr'];
+$i++;
+}
+$query = mysql_query("SELECT* FROM `pendencias` WHERE `n_circ` = '$ccto' and `filial` = '$filial' and `data_e` = '$data'");
+ver_mysql($query);
+while($row = mysql_fetch_array($query)) {
+$Tr1[$i] = $row['tr'];
+$i++;
+}
+
+mysql_close($con);
+
+$Tr2 = array_unique($Tr1);
+
+	foreach($Tr2 as $tr) {
+	list($ano,$mes,$dia) = explode("-",$data);
+	$datam = "$dia / $mes / $ano";
+	
+	$tem = false;
+	$con = conectar();
+	$comen = mysql_query("SELECT* FROM `comentarios` WHERE `n_circ` = '$ccto' and `filial` = '$filial' and `data_c` = '$data' and `tr` = '$tr'");
+	if(mysql_num_rows($comen) > 0) {
+	$tem = true;
+	}
+	$objc = mysql_query("SELECT* FROM `objectel` WHERE `n_circ` = '$ccto' and `filial` = '$filial' and `data_e` = '$data' and `tr` = '$tr'");
+	if(mysql_num_rows($objc) > 0) {
+	$tem = true;
+	}
+	$pend = mysql_query("SELECT* FROM `pendencias` WHERE `n_circ` = '$ccto' and `filial` = '$filial' and `data_e` = '$data' and `tr` = '$tr'");
+	if(mysql_num_rows($pend) > 0) {
+	$tem = true;
+	}
+	mysql_close($con);
+
+	if($tem == true) {
+
+	echo "
+	<table width='100%' height='144' class='com' cellpadding='5' >
+		 <tr>
+		   <th height='23' colspan='2' scope='col' align='left'>Dia $datam - " . tr_nome($tr) . " </th>
+		 </tr>";
+	if(isset($comen)) {
+		while($row = mysql_fetch_array($comen)) {
+	echo  "<tr>
+		   <td align='right' width='120px' height='20'>Coment&aacute;rio: </td>
+		   <td width='530px' align='left'>$row[comentario]</td>
+		 </tr>";
+		}
+	}
+
+	if(isset($pend)) {
+		while($row = mysql_fetch_array($pend)) {
+	echo  "<tr>
+		   <td width='120px' align='right' height='20'>Pend&ecirc;ncia - $row[pendencia]: </td>
+		   <td width='530px'>$row[relatorio]</td>
+		 </tr>";
+		if($row['replica'] != '') {
+	echo  "<tr>
+		   <td width='120px' align='right' height='20'>R&eacute;plica Pend&ecirc;ncia: </td>
+		   <td width='530px'>$row[replica]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Por: " . tr_nome($row['tr_rep']) . "</td>
+		 </tr>";
+		}
+		}
+	}
+	if(isset($objc)) {
+		while($row = mysql_fetch_array($objc)) {
+	echo  "<tr>
+		   <td width='120px' align='right'  height='30'>Objectel: </td>
+		   <td width='530px'>$row[relatorio]</td>
+		 </tr>";
+		if($row['replica'] != '') {
+	echo  "<tr>
+		   <td width='120px' align='right' height='30'>R&eacute;plica Objectel: </td>
+		   <td width='530px'>$row[replica]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Por: " . tr_nome($row['tr_rep']) . "</td>
+		 </tr>";
+		}
+		}
+	}
+echo "<tr>
+	   <td colspan='2' height='30'>&nbsp;</td>
+	 </tr>
+	 </table>";
+
+
+
+	}
+
+
+	}
+if(isset($query)) {
+mysql_free_result($query);
+}
+}
+
+?>
+
+
+
+</td>
+  </tr>
+</table>
+<center><input type='button' onclick='window.close();' value='Fechar Histórico'></center>
+</body>
+</html>

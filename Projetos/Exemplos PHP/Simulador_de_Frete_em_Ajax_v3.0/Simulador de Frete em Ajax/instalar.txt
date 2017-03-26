@@ -1,0 +1,152 @@
+Favor manter os meritos do script 
+
+
+// Adaptado por: Anderson Lima 2007
+// DIGIART - Design e Sistemas
+// http://www.digiartstudio.net
+// Adaptador por Ariel gonçalves 2010 para o sistema oscommerce 2.2-MS2
+// No link abaixo tem um exemplo modificado, acesse para ver o script funcionando.
+// http://www.eletricasintonia.com.br/luminaria-de-mesa-preta-versaty-cod-1405-p-879.html
+
+
+====================================================================================
+
+SIMULADOR DE FRETE EM AJAX v3.0 - 20/08/2010
+
+- Atualizado para o novo webservice dos Correios, 
+agora http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx
+
+- Único arquivo modificado: calcular.php. Para atualizar instalação já existente, 
+basta substituir este arquivo.
+
+- Renomeado para versão 3.0 para melhor organização e diferenciar das versões anteriores
+
+- Alterações cosméticas nas instruções para maior clareza
+
+    By Patty - www.cybernetfx.com
+    Fórum de Suporte: www.forumdowebmaster.com.br
+
+Agradecimentos aos autores e colaboradores.
+
+====================================================================================
+
+
+Atualizado por Ariel gonçalves em 24-02-2010 para as novas diretrizes dos correios
+http://www.correios.com.br/servicos/precos_tarifas/pdf/SCPP_Manual_Implementacao_Calculo_Remoto_de_Precos_e_Prazos.pdf
+
+Para quem ja tem o script instalado somente substitua o arquivo "calcular.php" pelo presente nessa pasta, para quem não tem instalado deve seguir totos os passos abaixo.
+
+====================================================================================
+
+
+
+Esse script em Ajax faz simulação de cálculo de frete direto do webservice dos Correios. Foi adaptado para ser usado na página do produto (product_info.php) e pode ser facilmente adaptado para simular o frete também no carrinho de compras (shopping_cart.php). A aparência pode ser facilmente customizada.
+
+
+Opções de frete:
+
+PAC
+SEDEX
+SEDEX 10
+SEDEX a Cobrar
+SEDEX HOJE
+
+
+--------------------
+
+INSTRUÇÕES PARA INSTALAÇÃO
+
+
+1- No pacote do módulo, abra o arquivo calcular_frete/index.php, localize o seguinte código por volta da linha 13 e adicione o CEP de sua loja:
+
+$cep_origem = "CEP DA LOJA"; // Digite o CEP de sua loja no formato 00000-000
+
+
+
+2- Em calcular_frete/calcular.php
+
+
+  Foi adicionado abaixo de $peso = $_GET["peso"]; a variável $peso = $peso/1000; para calcular em gramas
+  Se sua loja utilizar KG, comente essa linha, colocando // na frente.
+
+
+  se não desejar todas as opções de frete, apenas abra o arquivo calcular_frete/index.php e em <select name="servico" id="servico" > exclua a opção que não desejar usar.
+
+  EX: Remova a linha <option value="40290">SEDEX HOJE</option> se não quiser usar Sedex Hoje
+
+
+3- Faça upload da pasta calcular_frete para a raiz do site, obedecendo a estrutura em que está.
+
+4- Faça backup do arquivo loja/product_info.php e nele faça as seguintes alterações:
+
+
+   a) Antes do </head> adicione:
+
+<script language="javascript"><!--
+function popupfrete(url) {window.open(url,'popupfrete','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no,width=350,height=200,top=200,left=350')
+}
+//--></script>
+
+
+---------
+
+
+   b) Localize:
+
+$product_info_query = tep_db_query("select p.products_id,
+
+
+
+   Substitua por: 
+
+$product_info_query = tep_db_query("select p.products_id, p.products_weight,
+
+
+---------
+
+
+   c) Localize:
+
+} else {
+      $products_name = $product_info['products_name'];
+    }
+
+
+
+   Adicione abaixo:
+
+$products_weight = $product['products_weight'];	
+
+
+---------
+
+
+   d) Localize:
+
+
+ </td>
+            </tr>
+          </table>
+<?php
+    }
+?>
+          <p><?php echo stripslashes($product_info['products_description']); ?>
+
+
+   Adicione acima:
+
+<br /><br /><a href="javascript:popupfrete('calcular_frete/index.php?peso=<?php echo $product_info['products_weight']; ?>&valor=<?php echo $product_info['products_price']; ?>&nome_produto=<? echo $products_name = $product_info['products_name']; ?>&nome_loja=<?php echo TITLE; ?>')"><img src="calcular_frete/imagens/calcular.gif" border="0"></a>
+
+
+
+********************************************* // **************************************************
+
+
+Se tiver seguido todos os passos conforme especificado, a instalação chegou ao fim e o script estará funcionando perfeitamente.
+
+Atualizações são bem vindas.
+
+
+Bugs? Problemas?
+
+Fórum de Suporte: www.forumdowebmaster.com.br

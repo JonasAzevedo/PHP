@@ -1,0 +1,466 @@
+<?php include("funcoes.php");
+logout();
+
+ ?>
+<html>
+<title>CPTX - R. de Aus&ecirc;ncias</title>
+
+<style type="text/css">
+<!--
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #333333;
+}
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+-->
+
+
+</style><head>
+
+<?php 
+echo "<script language='javascript'>\n";
+
+	echo "function rat(){\n";
+
+	if(!isset($_SESSION['log_tx']) or $_SESSION['level'] > 2) {
+	echo "var camp = new Array();\n";
+
+
+	}
+	echo "}\n\n</script>";
+
+?>
+
+
+
+<!-- European format dd-mm-yyyy -->
+<script language="JavaScript" src="calendar\calendar1.js"></script><!-- Date only with year scrolling -->
+<!-- American format mm/dd/yyyy -->
+<script language="JavaScript" src="calendar\calendar2.js"></script><!-- Date only with year scrolling -->
+
+<script language='javascript'>
+
+function getUrlVars()
+{
+
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+ 
+    for(var i = 0; i < hashes.length; i++)
+    {	
+        hash = hashes[i].split('=');
+		hash[1] = unescape(hash[1]);
+		vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+ 
+    return vars;
+}
+var get1 = getUrlVars();
+
+function swap(id) {
+
+	if(id == "per") {
+		document.getElementById("day").checked = false;
+		document.form_aus.data_un.value = '';
+		document.getElementById("colde").style.display = 'block';
+		document.getElementById("colate").style.display = 'block';
+		document.getElementById("coldia").style.display = 'none';
+
+	}
+	if(id == "day") {
+		document.getElementById("per").checked = false;
+		document.form_aus.data_de.value = '';
+		document.form_aus.data_ate.value = '';
+		document.getElementById("colde").style.display = 'none';
+		document.getElementById("colate").style.display = 'none';
+		document.getElementById("coldia").style.display = 'block';
+	}
+}
+
+function lock() {
+document.getElementById("day").disabled = 1;
+document.getElementById("per").disabled = 1;
+document.getElementById("data_de").disabled = 1;
+document.getElementById("data_ate").disabled = 1;
+document.getElementById("data_un").disabled = 1;
+document.getElementById("justificativa").disabled = 1;
+
+}
+
+
+function submitaus() {
+
+	if(document.getElementById("day").checked == true) {
+		if(document.getElementById("data_un").value == '') {
+		alert("Selecione uma data.");
+		return false;		
+		}
+	}
+	else {
+		if(document.getElementById("data_de").value == '') {
+		alert("Selecione a data inicial que voce se ausentou.");
+		return false;		
+		}
+		if(document.getElementById("data_ate").value == '') {
+		alert("Selecione a data final de sua ausencia.");
+		return false;		
+		}
+	}
+
+	if(document.getElementById("justificativa").value == null || document.getElementById("justificativa").value == '' || document.getElementById("justificativa").value == "Que seja boa...") {
+	alert("Voce precisa descrever o que está ocorrendo.");
+	return false;
+	}
+	else {
+		document.form_aus.data_de.disabled = 0;
+		document.form_aus.data_ate.disabled = 0;
+		document.form_aus.data_un.disabled = 0;
+		document.form_aus.submit();
+	}
+	
+
+	
+
+}
+
+
+function loader() {
+
+rat();
+
+}
+
+
+</script>
+
+<style type="text/css">
+body{
+overflow-y: hidden;
+background-repeat: repeat-y;
+background-color: #FFFFFF;
+background-position: center;
+background-image:url(bg.png);
+margin-top: 0;
+}
+
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+.rodape {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	display:none;
+}
+#topo {
+	background-color:#FFFFFF;
+	top: 0px;
+
+}
+
+.style3 {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	font-weight: bold;
+}
+
+table.aus th {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+table.aus td {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+}
+
+.topo  {display: block;}
+.style4 {font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+
+</style>
+</head>
+<body onLoad="loader();">
+
+<center>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="848">
+<!-- fwtable fwsrc="topo_edit_producao.png" fwbase="topo.png" fwstyle="Dreamweaver" fwdocid = "2142344543" fwnested="0" -->
+  <tr>
+   <td><img src="imagens\spacer.gif" width="11" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="51" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="15" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="85" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="19" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="61" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="18" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="62" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="18" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="55" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="15" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="49" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="245" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="65" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="6" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="65" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="8" height="1" border="0" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="1" height="1" border="0" alt="" /></td>
+  </tr>
+
+  <tr>
+   <td colspan="17"><img name="topo_r1_c1" src="imagens\topo_r1_c1.png" width="848" height="52" border="0" id="topo_r1_c1" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="1" height="52" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td rowspan="3"><img name="topo_r2_c1" src="imagens\topo_r2_c1.png" width="11" height="20" border="0" id="topo_r2_c1" alt="" /></td>
+   <td><div align="center" class="style4"><a href="index.php">Início</a></div></td>
+   <td rowspan="3"><div align="center" class="style4"><img name="topo_r2_c3" src="imagens\topo_r2_c3.png" width="15" height="20" border="0" id="topo_r2_c3" alt="" /></div></td>
+   <td><div align="center" class="style4"><a href="ausencia.php">Aus&ecirc;ncias</a></div></td>
+   <td rowspan="3"><div align="center" class="style4"><img name="topo_r2_c5" src="imagens\topo_r2_c5.png" width="19" height="20" border="0" id="topo_r2_c5" alt="" /></div></td>
+   <td><div align="center" class="style4"><a href="registro.php">Registro</a></div></td>
+   <td rowspan="3"><div align="center" class="style4"><img name="topo_r2_c7" src="imagens\topo_r2_c7.png" width="18" height="20" border="0" id="topo_r2_c7" alt="" /></div></td>
+   <td><div align="center" class="style4"><a href="consulta.php">Consulta</a></div></td>
+   <td rowspan="3"><div align="center" class="style4"><img name="topo_r2_c9" src="imagens\topo_r2_c9.png" width="18" height="20" border="0" id="topo_r2_c9" alt="" /></div></td>
+   <td><div align="center" class="style4"><a href="admin.php">Gráficos</a></div></td>
+   <td rowspan="3"><div align="center" class="style4"><img name="topo_r2_c11" src="imagens\topo_r2_c11.png" width="15" height="20" border="0" id="topo_r2_c11" alt="" /></div></td>
+   <td><div align="center" class="style4"><a href="sobre.php">Sobre</a></div></td>
+   <td rowspan="3"><img name="topo_r2_c13" src="imagens\topo_r2_c13.png" width="245" height="20" border="0" id="topo_r2_c13" alt="" /></td>
+   <td rowspan="2"><a href='conf.php'><img name="topo_r2_c14" src="imagens\topo_r2_c14.png" width="65" height="17" border="0" id="topo_r2_c14" alt="" /></a></td>
+   <td rowspan="3"><img name="topo_r2_c15" src="imagens\topo_r2_c15.png" width="6" height="20" border="0" id="topo_r2_c15" alt="" /></td>
+   <td rowspan="2"><a href="redirecionar.php?sair=1"><img name="topo_r2_c16" src="imagens\topo_r2_c16.png" width="65" height="17" border="0" id="topo_r2_c16" alt="" /></a></td>
+   <td rowspan="3"><img name="topo_r2_c17" src="imagens\topo_r2_c17.png" width="8" height="20" border="0" id="topo_r2_c17" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="1" height="15" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td rowspan="2"><img name="topo_r3_c2" src="imagens\topo_r3_c2.png" width="51" height="5" border="0" id="topo_r3_c2" alt="" /></td>
+   <td rowspan="2"><img name="topo_r3_c4" src="imagens\topo_r3_c4.png" width="85" height="5" border="0" id="topo_r3_c4" alt="" /></td>
+   <td rowspan="2"><img name="topo_r3_c6" src="imagens\topo_r3_c6.png" width="61" height="5" border="0" id="topo_r3_c6" alt="" /></td>
+   <td rowspan="2"><img name="topo_r3_c8" src="imagens\topo_r3_c8.png" width="62" height="5" border="0" id="topo_r3_c8" alt="" /></td>
+   <td rowspan="2"><img name="topo_r3_c10" src="imagens\topo_r3_c10.png" width="55" height="5" border="0" id="topo_r3_c10" alt="" /></td>
+   <td rowspan="2"><img name="topo_r3_c12" src="imagens\topo_r3_c12.png" width="49" height="5" border="0" id="topo_r3_c12" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="1" height="2" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td><img name="topo_r4_c14" src="imagens\topo_r4_c14.png" width="65" height="3" border="0" id="topo_r4_c14" alt="" /></td>
+   <td><img name="topo_r4_c16" src="imagens\topo_r4_c16.png" width="65" height="3" border="0" id="topo_r4_c16" alt="" /></td>
+   <td><img src="imagens\spacer.gif" width="1" height="3" border="0" alt="" /></td>
+  </tr>
+</table>
+
+
+
+
+
+
+</center><br>
+
+<!-- Tabela que engloba BODY -->
+<table width="843" border="0" align="center">
+
+ <tr>
+    <td><div align="center" class="style3">Registro de Ausência</div></td>
+ </tr>
+ <tr>
+    <td>
+<br><br>
+
+
+<form name="form_aus" action="inserir.php?mod=aus" method="post">
+
+
+<!-- Começo da tabela -->
+<table align='center' border='0' width='100%' height='500px' class='style1'>
+<?php
+
+if($_SESSION['level'] == 3 or $_SESSION['level'] == 2) {
+echo "<tr>";
+echo "<td colspan='2' align='center'>Referente á:&nbsp;&nbsp;";
+$con = conectar();
+
+$query = mysql_query("SELECT* FROM `cadastro` WHERE `level` < '3'");
+echo "<select name='ref_m' id='ref_m'>";
+echo "<option value=''>&nbsp;&nbsp;&nbsp;&nbsp;</option>";
+while($row = mysql_fetch_array($query)) {
+echo "<option value='" . $row['tr'] . "'>" . tr_nome($row['tr']) . "</option>";
+}
+echo "</select>";
+echo "</tr>";
+}
+?>
+
+<tr><td colspan='2' valign='top'>
+	
+
+<!-- Começo da tabela de ausência -->
+
+	<table width="30%" border="0" align="center" id="tab_fe" style="display: block;" class="style1">
+
+<tr height='40px'>
+        <td colspan='2' align="center">
+	  <input type='radio' name='per' id='per' onclick='swap(this.id)'>Periodo	<input name='day' id='day' type='radio' onclick='swap(this.id)'>	Dia Unico
+	   </td>
+</tr>
+     <tr height='40px'>
+
+	<td colspan='2' align='center' id='colde' style='display: none;'>
+
+	<label>
+	&nbsp;De:
+	<input type="text" name="data_de" id="data_de" onFocus="this.style.background='#00FF33';" onBlur="this.style.background='#ffffff';" size='10'>
+
+	<a href="javascript:cal1.popup();">
+	<img src="calendar/img/cal.gif" width="16" height="16" border="0" alt="Clique aqui para selecionar uma data">
+	</a>
+	</label>
+
+	<a href="#">
+	<img src="imagens/icon_limpar.gif" width="16" height="16" border="0" alt="Apagar data" onClick="document.forms['form_aus'].data_de.value=''" />
+	</a>
+	</td>
+	</tr>
+	<tr>
+	<td colspan='2' align='center' id='colate' style='display: none;'>
+
+	<label>
+	Até:
+	<input type="text" name="data_ate" id="data_ate" onFocus="this.style.background='#00FF33';" onBlur="this.style.background='#ffffff';" size='10'>
+
+	<a href="javascript:cal2.popup();">
+	<img src="calendar/img/cal.gif" width="16" height="16" border="0" alt="Clique aqui para selecionar uma data">
+	</a>
+	</label>
+
+	<a href="#">
+	<img src="imagens/icon_limpar.gif" width="16" height="16" border="0" alt="Apagar data" onClick="document.forms['form_aus'].data_ate.value=''" />
+	</a>
+
+	</td>
+
+<!-- Coluna dia unico -->
+
+<td colspan='2' align='center' id='coldia' style='display: none;'>
+		<label id='daylab'>
+		Dia:
+		</label>
+	<input type="text" name="data_un" id="data_un" onFocus="this.style.background='#00FF33';" onBlur="this.style.background='#ffffff';" size='10'>
+
+	<a href="javascript:cal3.popup();">
+	<img src="calendar/img/cal.gif" width="16" height="16" border="0" alt="Clique aqui para selecionar uma data">
+	</a>
+
+	<a href="#">
+	<img src="imagens/icon_limpar.gif" width="16" height="16" border="0" alt="Apagar data" onClick="document.forms['form_aus'].data_un.value=''" />
+	</a>
+
+	</td>
+<!-- Fim dia unico -->
+
+
+
+</tr>
+<tr height='125px'><td>Justificativa: </td><td><textarea name="justificativa" id="justificativa" rows='5' cols='40' class='style1'></textarea></td></tr>
+<tr><td>&nbsp;</td><td align='center'><input type='button' id='justf' onclick='submitaus();' value='Justificar'></td></tr>
+</table>
+</form>
+	
+
+			<script language="JavaScript">
+				 // create calendar object(s) just after form tag closed
+				 // specify form element as the only parameter (document.forms['formname'].elements['inputname']);
+				 // note: you can have as many calendar objects as you need for your application
+				document.form_aus.data_de.disabled = 1;
+				document.form_aus.data_ate.disabled = 1;
+				document.form_aus.data_un.disabled = 1;
+
+				var cal1 = new calendar1(document.forms['form_aus'].elements['data_de']);
+				cal1.year_scroll = true;
+				cal1.time_comp = false;
+
+				var cal2 = new calendar1(document.forms['form_aus'].elements['data_ate']);
+				cal2.year_scroll = true;
+				cal2.time_comp = false;
+
+				var cal3 = new calendar1(document.forms['form_aus'].elements['data_un']);
+				cal2.year_scroll = true;
+				cal2.time_comp = false;
+
+			</script>
+
+<br><br>
+<table class='aus' align='center' width='800px' border='0'>
+<tr align='center'>
+<th width='200px' height='70px'>Ausente</th><th width='400px'>Parecer</th><th colspan='2'>Periodo</th>
+</tr>
+<?php
+
+$con = conectar();
+
+$query = mysql_query("SELECT* FROM `ausentes`");
+ver_mysql($query);
+while ($row = mysql_fetch_array($query)) {
+
+	echo "<tr align='center' height='30px'>";
+	echo "<td>" . tr_nome($row['tr']) . "</td>";
+	echo "<td>$row[justificativa]</td>";
+
+	if($row['diaun'] == "" or $row['diaun'] == null) {
+	list($dia,$mes,$ano) = explode("-", $row['de']);
+	$row['de'] = "$dia / $mes / $ano";
+	list($dia,$mes,$ano) = explode("-", $row['ate']);
+	$row['ate'] = "$dia / $mes / $ano";
+
+	echo "<td width='100px'>$row[de]</td>";
+	echo "<td width='100px'>$row[ate]</td>";
+	}
+	else {
+	list($dia,$mes,$ano) = explode("-", $row['diaun']);
+	$row['diaun'] = "$dia / $mes / $ano";
+	echo "<td colspan='2'>Dia: $row[diaun]</td>";
+	}
+echo "</tr>";
+
+
+}
+
+
+?>
+</table>
+
+
+</body>
+</html>
+<?php if(isset($_GET['aus'])) {
+	if($_GET['aus'] == 1) {
+		echo "<script>";
+		echo "alert('Seu registro de ausencia foi registrado com sucesso.');";
+		echo "</script>";
+	}
+}
+if($_SESSION['level'] == 3) {
+echo "<script language='JavaScript'>
+
+document.form_aus.day.disabled = 1;
+document.form_aus.per.disabled = 1;
+document.form_aus.data_de.disabled = 1;
+document.form_aus.data_ate.disabled = 1;
+document.form_aus.data_un.disabled = 1;
+document.form_aus.justificativa.disabled = 1;
+document.form_aus.ref_m.disabled = 1;
+document.form_aus.justf.disabled = 1;
+
+</script>";
+}
+?>

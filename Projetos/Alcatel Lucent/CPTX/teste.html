@@ -1,0 +1,22 @@
+<html>
+  <head>
+<script language="JavaScript" src="./calendar/calendar1.js"></script><!-- Date only with year scrolling -->
+<!-- American format mm/dd/yyyy -->
+<script language="JavaScript" src="./calendar/calendar2.js"></script><!-- Date only with year scrolling -->
+</head>
+
+  <body>
+    <form name="form_mnt" id="form_mnt">
+      <input name="data_e" type="text" id="data_e" size="10" maxlength="10" />
+      <a href="javascript:cal1.popup();"><img src="calendar/img/cal.gif" width="16" height="16" border="0" alt="Clique aqui para selecionar uma data"></a>&nbsp;
+      <input type="image" name="imageField2"  width="20px"  height="20px"src="imagens/icon_limpar.gif" />
+    </form>
+    <script language="JavaScript">
+      document.getElementById('data_e').disabled = true;
+	  var cal1 = new calendar1(document.forms['form_mnt'].elements['data_e']);
+	  cal1.year_scroll = false;
+	  cal1.time_comp = false;
+    </script>
+  </body>
+ 
+</html>

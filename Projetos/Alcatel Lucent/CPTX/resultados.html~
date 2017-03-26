@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<p align="center" class="style2">Visualização de ARS</p>
+<table width="43%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="13%" class="style1"><div align="right">ARS:</div></td>
+    <td width="87%"><label></label>    </td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">BA:</div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">Circuito:</div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">ID:</div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">Equipamento:</div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">Tarefa:</div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">Descri&ccedil;&atilde;o:</div></td>
+    <td><label></label>    </td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">Solicitante:</div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">Observa&ccedil;&atilde;o:</div></td>
+    <td><label></label>    </td>
+  </tr>
+  <tr>
+    <td class="style1"><div align="right">Data Solu&ccedil;&atilde;o:</div></td>
+    <td><label></label>    </td>
+  </tr>
+  <tr>
+    <td class="style1"><label></label>    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+
+</body>
+</html>

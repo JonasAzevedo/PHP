@@ -1,0 +1,164 @@
+body {
+     font-family     : sans-serif;
+     background-color: #DDEAD5;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
+a: {
+  text-decoration:none;
+}
+
+a:link {
+  text-decoration: none;
+  color          : #008080;
+  font-size      : 16px;
+}
+a:active {
+  text-decoration: none;
+  font-size      : 16px;
+}
+a:visited {
+  text-decoration: none;
+  color          : #008080;
+  font-size      : 16px;
+  
+}
+a:hover {
+  text-decoration: none;
+  color          : #008080;
+  font-size      : 16px;
+}
+
+h2 {
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 24px;
+  font-weight      : bold;
+  color            : #000040;
+}
+
+.buttons1 {
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 14px;
+  font-weight      : bold;
+  width            : 160px;
+  height           : 40px;
+  background-color : #D0D0D0;
+  color            : #404000;
+  border           : 1px solid #606060;
+}
+
+.buttons2 {
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 13px;
+  width            : 160px;
+  height           : 40px;
+  background-color : #D0D0D0;
+  color            : #404000;
+  border           : 1px solid #606060;
+}
+
+.buttonsExcluir {
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 10px;
+  width            : 60px;
+  height           : 20px;
+  background-color : #DEDCDA;
+  color            : #000080;
+  border           : 1px solid #606060;
+}
+
+.buttonsSalvar{
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 12px;
+  font-weight      : bold;
+  width            : 100px;
+  height           : 25px;
+  background-color : #D0D0D0;
+  color            : #400000;
+  border           : 1px solid #606060;
+}
+
+.buttonGrafico{
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 12px;
+  font-weight      : bold;
+  width            : 230px;
+  height           : 20px;
+  background-color : #DDEAD5  ;
+  cursor           : pointer;
+  border           : 0px;
+  padding          : 2px;
+}
+
+.buttonGeraPDF{
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  color            : #008080;
+  font-size        : 18px;
+  font-weight      : bold;
+  width            : 230px;
+  height           : 30px;
+  background-color : #EAF4ED;
+  cursor           : pointer;
+  border           : 2px;
+  padding          : 2px;
+}
+
+
+.file1 {
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 10px;
+  width            : 160px;
+  height           : 25px;
+  background-color : #C0FFFF;
+  color            : ##008080;
+  border           : 1px solid #008080;
+}
+
+.text1{
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 10px;
+  width            : 50px;
+  height           : 20px;
+  background-color : #C0FFFF;
+  color            : ##008080;
+  border           : 1px solid #008080;
+}
+
+.text2{
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 10px;
+  width            : 80px;
+  height           : 20px;
+
+}
+
+.texAreLegenda {
+background-color   : #EAF4ED;
+border             : 0px;
+font               :12px verdana, arial, helvetica, sans-serif;
+color              : #000040;
+}
+
+
+div#divSelecaoData{
+	position: absolute;
+	bottom: 0;
+ }
+
+div#divExibeCalendario{
+	position: relative;
+	bottom: 0;
+ }

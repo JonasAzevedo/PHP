@@ -1,0 +1,111 @@
+    body{
+       overflow-y: hidden;
+       background-repeat: repeat-y;
+       background-color: #FFFFFF;
+       background-position: center;
+       background-image:url(fundo.png);
+       margin-top: 0;
+    }
+
+    div.grupoOpc{
+      position: relative;
+      width: 430px;
+      height: 430px;
+      margin: 0px;
+      margin-top: 3px;
+      margin-left: 400px;
+      border: 0px solid;
+    }
+
+    div.titulo{
+      position: relative;
+      text-align: center;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0px;
+      margin-top: 10px;
+      border: 0px solid;
+    }
+    
+    span.descTR{
+      position: relative;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0px;
+      top: 40px;
+      margin-left: 90px;
+      border: 0px solid;
+    }
+    
+    span.descSenha{
+      position: relative;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0px;
+      top: 60px;
+      margin-left: 90px;
+      border: 0px solid;
+    }
+    
+    input.campoTR{
+      position: relative;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0px;
+      top: 40px;
+      left: 56px;
+      border: 1px solid;
+    }
+    
+    input.campoSenha{
+      position: relative;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0px;
+      top: 60px;
+      left: 30px;
+      border: 1px solid;
+    }
+
+    input.pesquisar{
+		position: absolute;
+		margin: 0px;
+		padding: 0px;
+		top: 180px;
+		left: 80px;
+		width: 90px;
+		height: 30px;
+		background: #ADAD5A;
+		color: #000000;
+		font-family: verdana, helvetica, arial, sans-serif;
+		font-size: 16px;
+		font-weight: 900;
+		border-color: #00B058;
+		border: 1px solid;
+    }
+    
+    input.limpar{
+		position: absolute;
+		margin: 0px;
+        padding: 0px;
+        top: 180px;
+		left: 210px;
+		width: 90px;
+		height: 30px;
+		background: #ADAD5A;
+		color: #000000;
+		font-family: verdana, helvetica, arial, sans-serif;
+		font-size: 16px;
+		font-weight: 900;
+		border-color: #00B058;
+		border: 1px solid;
+    }

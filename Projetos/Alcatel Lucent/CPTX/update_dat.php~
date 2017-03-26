@@ -1,0 +1,38 @@
+<?php
+
+$var1 = $_GET['ars'];
+$var2 = $_POST['n_dat'];
+
+list($dia,$mes,$ano) = explode("-", $_POST['n_dat']);
+
+$data_f = $ano . "-" . $mes . "-" . $dia;
+
+$miolo = "UPDATE `tabela` SET `data_solucao` = '$data_f' WHERE ars = '$var1'";
+
+echo "<script language=\"javascript\">
+opener.window.location.reload();
+</script>";
+echo "<div align='center' style='font-size: 18px;font-family: Arial;'>Data atualizada com sucesso.</div>";
+
+if($_POST['n_dat'] == null or $_POST['n_dat'] == "" or $_GET['ars'] == null) {
+
+	echo "<script language=\"javascript\">
+	location.href=\"http://10.41.95.135/ARS?error=1\"
+	</script>";
+	exit;
+}
+
+//Updating on database
+$con = mysql_connect("localhost","root","brasil");
+mysql_select_db("ars", $con);
+
+$query = mysql_query($miolo);
+
+$var = null;
+exit;
+echo "
+<script language=\"javascript\">
+location.href=\"http://10.41.95.135/ARS/confirmacao.html\"
+</script>";
+
+?>

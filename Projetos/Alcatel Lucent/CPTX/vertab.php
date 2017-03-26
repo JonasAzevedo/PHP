@@ -1,0 +1,71 @@
+<?php include("funcoes.php"); ?>
+<html>
+<head>
+<style type="text/css">
+
+table.lista {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+text-align: center;
+}
+
+table.lista th {
+font-size: 13px;
+}
+
+</style>
+
+</head>
+<body>
+<table width="100%" align="center" class="lista">
+  <tr>
+    <th width='10%' height="37" scope="col">Circuitos</th>
+    <th width='80%' scope="col">Pend&ecirc;ncia Objectel </th>
+    <th width='10%' scope="col">Data de Execu&ccedil;&atilde;o </th>
+  </tr>
+	<?php
+$con = conectar();
+if($_GET['mod'] == "obj") {
+$query = mysql_query("SELECT* FROM `objectel` where `status` = 0");
+$img = "<img width='20px' height='20px' src='imagens/Objoff.png'>";
+}
+if($_GET['mod'] == "pen") {
+$query = mysql_query("SELECT* FROM `pendencias` where `status` = 0");
+$img = "<img width='20px' height='20px' src='imagens/pender.png'>";
+}
+
+ver_mysql($query);
+
+while($row = mysql_fetch_array($query)) {
+list($ano,$mes,$dia) = explode("-",$row['data_e']);
+
+echo "<tr>";
+echo "	<td scope='col'>$row[filial] $row[n_circ]</td>";
+echo "	<td scope='col'>$row[relatorio]</td>";
+echo "	<td scope='col'>$dia / $mes / $ano</td>";
+echo "</tr>";
+	
+}
+
+mysql_close($con);
+?>
+
+  <tr>
+    <td height="38">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan='3' height="33"><input type='button' onclick='window.close();' value='Fechar'></td>
+  </tr>
+
+  </tr>
+</table>
+
+
+
+
+</body>
+
+
+</html>

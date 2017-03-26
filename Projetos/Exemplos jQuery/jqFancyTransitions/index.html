@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="jqFancyTransitions é um plugin para mostrar suas fotos como slideshow com efeitos de transição fantásticos." />
+<meta name="keywords" content="jquery plugin,jquery slideshow,jquery slider,gallery, transitions effects" />
+
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jqFancyTransitions.js"></script>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+<title>jqFancyTransitions: Plugin jQuery para Transições de imagems</title>
+</head>
+
+<body> 
+
+<div id="head">
+	<h1><i>jqFancyTransitions</i> - Transições de Imagens com jQuery<br />
+	<small>slideshow com efeitos com faixas</small></h1>
+	
+	<p class="headText">
+	<strong>jqFancyTransitions</strong> é um plugin <a href="http://www.jquery.com" target="_blank">jQuery</a>  fácil de usar
+	para mostrar suas fotos como slideshow com efeitos de transição fantásticos.
+	</p>
+	
+	<p class="headText">
+	<strong>jqFancyTransitions</strong> é compatível e totalmente testado com Safari 2+, Internet Explorer 6+, Firefox 2+, Google Chrome 3+, Opera 9+.
+	</p>
+	<br />
+	<h2>Download</h2>
+	<p class="download headText">
+	<a href="jqFancyTransitions.js">Não comprimido (6.3kb)</a>
+	<a href="jqFancyTransitions.min.js">Compactado (4.7kb)</a>
+	<br />
+	<a href="http://workshop.rs/2009/12/image-gallery-with-fancy-transitions-effects/">Lista de discussão</a>
+	
+	</p>
+</div>
+
+
+<div id="ftHolder">
+
+	<div id="ft">
+		<img src="terrace_view_marko_manojlovic.jpg" alt="<i>Terrace View <a href='http://sniperyu.deviantart.com/'>by Marko Manojlovic</a></i>" />
+		<img src="nbg1_goran_jovanovic.jpg" alt="NBG #1 <i><a href='http://picasaweb.google.com/azzazel'>by Goran Jovanovic</a></i>" />
+		<img src="zakynthos_ivan_jekic.jpg" alt="Navagio beach Zakynthos <i><a href='http://ivframes.com/'>by Ivan Jekic</a></i>" />			 
+		<img src="blue_window_igor_srdanovic.jpg" alt="Blue Window <i><a href='http://www.igorsrdanovic.com'>by Igor Srdanovic</a></i>" />
+	</div>
+	
+</div>
+
+
+<br clear="all" />
+
+<script type="text/javascript">
+	$('#ft').jqFancyTransitions();
+</script>
+
+
+<br clear="all" />
+
+<div id = "doc">
+
+<h1>Documentação</h1>
+
+<p>
+Este plugin é realmente fácil de usar. Após baixar o plugin e incluí-lo em sua página, tudo que você faz é criar um elemento com alguma ID na sua página e colocar um código semelhante a:<br />
+<br />
+<code>
+	$("#placeHolderID").jqFancyTransitions();
+
+</code><br />
+
+O código acima irá tomar todas as imagens do elemento e criar o slideshow. Se você quer inserir legendas para as imagens apenas acrescente texto na tag alt.<br /><br />
+
+</p>
+<pre><code style="padding-top:0px;">
+&lt;div id='placeHolderID'>
+	&lt;img src='img1.jpg' alt='img1' />
+	&lt;img src='img2.jpg' alt='img2' />
+	&lt;img src='img3.jpg' alt='img3' />
+&lt;/div>
+</code></pre>
+
+Você tem três efeitos pré-definidos que pode usar:
+<ul>
+	<li>Wave</li>
+	<li>Curtain</li>
+	<li>Zipper</li>
+</ul>
+
+<p>
+Naturalmente você pode criar efeitos personalizados combinando as opções como a velocidade, número de faixas, direção, tipo de efeito, etc.<br /><br />
+
+<code>
+
+	<strong>effect:</strong> '' <span class="comment">// wave, zipper, curtain</span><br />
+	<strong>width:</strong> 500 <span class="comment">// largura do painel</span><br />
+	<strong>height:</strong> 332 <span class="comment">// altura do painel</span><br />
+	<strong>strips:</strong> 20 <span class="comment">// número de faixas</span><br />
+	<strong>delay:</strong> 5000 <span class="comment">// delay entre as imagens em ms</span><br />
+	<strong>stripDelay:</strong> 50 <span class="comment">// delay entre as faixas em ms</span><br />
+	<strong>titleOpacity:</strong> 0.7 <span class="comment">// transparência do título</span><br />
+	<strong>titleSpeed:</strong> 1000 <span class="comment">// velocidade que o título aparece em ms</span><br />
+	<strong>position:</strong> 'alternate' <span class="comment">// top, bottom, alternate, curtain</span><br />
+	<strong>direction:</strong> 'fountainAlternate' <span class="comment">// left, right, alternate, random, fountain, fountainAlternate</span>
+
+</code>
+</p>
+
+</div>
+
+<br clear="all" />
+
+<div id="examples">
+	<h1>Exemplos</h1><br />
+
+<br />
+
+	<div class="exampleMenu">
+	    <a href="javascript:void(0);" id="effWave" class="eEff">wave</a>
+	    <a href="javascript:void(0);" id="effZipper" class="eEff">zipper</a>	
+	    <a href="javascript:void(0);" id="effCurtain" class="eEff">curtain</a>	        
+		<a href="javascript:void(0);" id="effFountainTop" class="eComb">fountain top</a> 
+		<a href="javascript:void(0);" id="effRandomTop" class="eComb">random top</a>
+		<a href="javascript:void(0);" id="effCurtainAlternate" class="eComb exampleActive">curtain alternate</a>
+		<a href="javascript:void(0);" id="effLeftTop" class="eComb">left top</a>
+		<a href="javascript:void(0);" id="effRightBottom" class="eComb">right bottom</a>		
+	</div>
+
+	<div id="example">
+		<img src="terrace_view_marko_manojlovic.jpg" alt="<i>Terrace View <a href='http://sniperyu.deviantart.com/'>by Marko Manojlovic</a></i>" />
+		<img src="nbg1_goran_jovanovic.jpg" alt="NBG #1 <i><a href='http://picasaweb.google.com/azzazel'>by Goran Jovanovic</a></i>" />
+		<img src="zakynthos_ivan_jekic.jpg" alt="Navagio beach Zakynthos <i><a href='http://ivframes.com/'>by Ivan Jekic</a></i>" />			 
+		<img src="blue_window_igor_srdanovic.jpg" alt="Blue Window <i><a href='http://www.igorsrdanovic.com'>by Igor Srdanovic</a></i>" />
+	</div>
+	
+	<script type="text/javascript">
+		$('#example').jqFancyTransitions({ position: 'curtain' });
+
+		$('#effCurtainAlternate').click( function(){
+			$('#example').jqFancyTransitions({ position: 'curtain', direction: 'alternate' });
+			$('#positionDyn').html('curtain');
+			$('#directionDyn').html('alternate');
+		});
+
+		$('#effFountainTop').click( function(){
+			$('#ft-title-example, .ft-example').remove();
+			$('#example').jqFancyTransitions({ position: 'top', direction: 'fountain' });
+			$('#positionDyn').html('top');
+			$('#directionDyn').html('fountain');
+		});	
+
+		$('#effRandomTop').click( function(){
+			$('#ft-title-example, .ft-example').remove();
+			$('#example').jqFancyTransitions({ position: 'top', direction: 'random' });
+			$('#positionDyn').html('random');
+			$('#directionDyn').html('top');
+		});	
+
+		$('#effLeftTop').click( function(){
+			$('#ft-title-example, .ft-example').remove();
+			$('#example').jqFancyTransitions({ position: 'top', direction: 'left' });
+			$('#positionDyn').html('left');
+			$('#directionDyn').html('top');
+		});	
+
+		$('#effRightBottom').click( function(){
+			$('#ft-title-example, .ft-example').remove();
+			$('#example').jqFancyTransitions({ position: 'bottom', direction: 'right' });
+			$('#positionDyn').html('right');
+			$('#directionDyn').html('bottom');
+		});			
+
+		$('.eComb').click( function(){
+			$('#eComb').show();
+			$('#eEff').hide();
+			$('.eComb').removeClass('exampleActive');
+			$('.eEff').removeClass('exampleActive');			
+			$(this).addClass('exampleActive');
+		});	
+
+		$('.eEff').click( function(){
+			$('#eComb').hide();
+			$('#eEff').show();
+			$('.eEff').removeClass('exampleActive');
+			$('.eComb').removeClass('exampleActive');			
+			$(this).addClass('exampleActive');			
+		});	
+
+		$('#effWave').click( function(){
+			$('#ft-title-example, .ft-example').remove();
+			$('#example').jqFancyTransitions({ effect: 'wave' });
+			$('#effDyn').html('wave');
+		});		
+
+		$('#effZipper').click( function(){
+			$('#ft-title-example, .ft-example').remove();
+			$('#example').jqFancyTransitions({ effect: 'zipper' });
+			$('#effDyn').html('zipper');
+		});		
+
+		$('#effCurtain').click( function(){
+			$('#ft-title-example, .ft-example').remove();
+			$('#example').jqFancyTransitions({ effect: 'curtain' });
+			$('#effDyn').html('curtain');
+		});	
+		
+	</script>
+	
+	<code>
+	$("#example").jqFancyTransitions({<br />
+	<span id="eComb">
+	&nbsp;&nbsp;&nbsp;position: '<span id="positionDyn" class="dyn">curtain</span>',<br />
+
+	&nbsp;&nbsp;&nbsp;direction: '<span id="directionDyn" class="dyn">alternate</span>'<br />	
+	</span>
+	<span id="eEff" style="display: none;">&nbsp;&nbsp;&nbsp;effect: '<span id="effDyn" class="dyn"></span>'<br /></span>
+	});
+	</code>
+</div>
+
+<div id="note">
+	
+	<h1>Notas</h1>
+
+	<ul>
+		<li>jqFancyTransitions com um plugin do jQuery, você precisará do <a href="http://www.jquery.com" target="_blank">jQuery</a> se quiser que funcione (que óbvio, não? lol).</li>
+		<li>Você pode usar e compartilhar este plugin gratuitamente.</li>
+		<li>O plugin foi testado com jQuery 1.2.3, jQuery 1.3.2 e jQuery 1.4.2 (eu testei com 1.4.2 XD).</li>
+		<li>Estes efeitos funcionam sem nenhum CSS adicional, mas você pode facilmente estilizar com CSS.</li>
+		<li>Se você encontrar algum bug, tiver algum comentário, questões ou apenas quiser mostrar onde usou o plugin você pode <a href="http://workshop.rs/2009/12/image-gallery-with-fancy-transitions-effects/">deixar uma mensagem no blog do desenvolvedor</a>.</li> 
+	</ul>
+	
+	<em>Fonte: http://workshop.rs/projects/jqfancytransitions/</em>
+</div>
+	
+</body>
+</html>

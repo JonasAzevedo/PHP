@@ -1,0 +1,64 @@
+/*
+  Nome: cJnlModalPgProdutos.css
+  Função: página css da pgProdutos.php, referente ao plugin jQuery para janela modal
+  Data de Criação: 25/03/2011 - 17:21
+  Data de Atualização: -
+  Desenvolvido por: -
+*/
+
+
+#mask {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+}
+
+
+#boxes .window {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 440px;
+    height: 200px;
+    display: none;
+    z-index: 9999;
+    padding: 20px;
+}
+
+
+#boxes .dialog {
+    width: 60%;
+    height: 25%;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+
+.close{
+    display: block;
+    height: 10%;
+    border: 0px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-size: 14px;
+    color: green;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: normal;
+    text-align:right;
+}
+.close:link{
+    text-decoration: none;
+}
+.close:visited{
+    text-decoration: none;
+}
+.close:hover{
+    text-decoration: underline;
+    color: red;
+}
+.close:active{
+    text-decoration: none;
+}

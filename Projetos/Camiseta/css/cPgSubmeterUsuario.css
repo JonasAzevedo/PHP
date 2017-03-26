@@ -1,0 +1,67 @@
+/*******************************************************************
+********************************************************************
+  Nome: cPgSubmeterUsuario.css
+  Função: página css da pgSubmeterUsuario.php
+  Data de Criação: 17/03/2011 - 23:15
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+*******************************************************************/
+
+#divMaskSubmeterUsuario{
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 9000;
+    background-color: #000;
+}
+
+.imgProcessando{
+    position: absolute;
+    left: 45%;
+    top: 35%;
+    border: 0px;
+    background-color: #000;
+}
+
+.spnProcessando{
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    border: 0px;
+    background-color: #000;
+    color: blue;
+    font-size: 16px;
+    font-family: Verdana, Arial, Trebuchet, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.spnMsgSucesso{
+    position: absolute;
+    display: none;
+    left: 20%;
+    top: 50%;
+    border: 0px;
+    background-color: #000;
+    color: blue;
+    font-size: 16px;
+    font-family: Verdana, Arial, Trebuchet, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.spnMsgSucessoCont{
+    position: absolute;
+    display: none;
+    left: 63%;
+    top: 50%;
+    border: 0px;
+    background-color: #000;
+    color: blue;
+    font-size: 16px;
+    font-family: Verdana, Arial, Trebuchet, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}

@@ -1,0 +1,102 @@
+.BODY {
+	SCROLLBAR-FACE-COLOR: #000000;
+	SCROLLBAR-HIGHLIGHT-COLOR: #000000;
+	SCROLLBAR-SHADOW-COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+	SCROLLBAR-ARROW-COLOR: #ffffff;
+	SCROLLBAR-TRACK-COLOR: #000000;
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+	SCROLLBAR-BASE-COLOR: #000000;
+	BACKGROUND-COLOR: #345633;
+}
+.inputbox, select, textarea {
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-size        : 9px;
+  color            : #000000;
+  background-color : #F0F0F0;
+  border           : 1px solid #CCCCCC;
+  width            : 120px;
+  FONT-WEIGHT      : bold;
+}
+
+.buttons2 {
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 13px;
+  font-weight      : bold;
+  background-color : #C0FFFF;
+  color            : #FF0000;
+  border           : 1px solid #0000FF;
+}
+
+.buttons1 {
+  font-family      : Arial, Helvetica, sans-serif;
+  font-style       : normal;
+  font-size        : 12px;
+  background-color : #C0FFFF;
+  color            : #FF0000;
+  border           : 1px solid #0000FF;
+}
+
+.div_conf{
+ width: 480px;
+ height: 10px;
+ border: 1px solid #c30;
+ background: #ffe;
+ vertical-align: -30s;
+ display: table-cell;
+}
+ 
+.rodape {
+    FONT-WEIGHT: bold; FONT-SIZE: 9px; COLOR: #000000; TEXT-DECORATION: none; FONT-FAMILY: Verdana;
+}
+.titulo {
+    font:11px Tahoma, Arial, Geneva, sans-serif; color:#000000; FONT-WEIGHT: bold;
+}
+.titulob {
+    font:11px Tahoma, Arial, Geneva, sans-serif; color:#FFFFFF; FONT-WEIGHT: bold;
+}
+.textos{
+    font:11px Tahoma, Arial, Geneva, sans-serif; color:#000000;
+}
+.formu {
+	FONT-SIZE: 12px; COLOR: #404040; TEXT-DECORATION: none; FONT-FAMILY: Verdana
+}
+.txtformp{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none; FONT-FAMILY: Verdana
+}
+.inic {
+	FONT-WEIGHT: bold; FONT-SIZE: 28px; MARGIN: 0px 0px 0px 54px; COLOR: #ff0000; FONT-STYLE: italic
+}
+.menu {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; FONT-FAMILY: Tahoma
+}
+.subtit-pop {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #666666; TEXT-DECORATION: none
+}
+.paragrafo {
+	MARGIN: 10px; WIDTH: 550px; TEXT-ALIGN: justify
+}
+.paragrafo2 {
+	MARGIN: 10px; TEXT-ALIGN: justify
+}
+.detalhe {
+	FONT-SIZE: 9px; COLOR: #a4a4a4; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+.subtitulo {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 4px 10px; COLOR: #808080; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+
+
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none; FONT-WEIGHT: bold;
+}
+A:visited {
+	COLOR: #909090; TEXT-DECORATION: none; FONT-WEIGHT: bold;
+}
+A:active {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #D0D0D0; TEXT-DECORATION: underline; FONT-WEIGHT: bold;
+}

@@ -1,0 +1,362 @@
+<?php include("funcoes.php");
+
+if(!isset($_GET['ano'])) {
+$ano = date("Y");
+}
+else {
+$ano = $_GET['ano'];
+}
+
+
+if(!isset($_GET['ars'])) {
+$_GET['ars'] = null;
+}
+
+if(!isset($_GET['ccto'])) {
+$_GET['ccto'] = '';
+}
+
+if(!isset($_GET['data_i'])) {
+$_GET['data_i'] = '';
+}
+
+if(!isset($_GET['data_f'])) {
+$_GET['data_f'] = '';
+}
+
+if(!isset($_SESSION['log_tx'])) {
+$_SESSION['log_tx'] = null;
+}
+
+if(isset($_GET['mes'])) {
+	if(strlen($_GET['mes'])==1) {
+	$_GET['mes'] = 0 . $_GET['mes'];
+	}
+	$mesg = $_GET['mes'];
+}
+else {
+$mesg = date("m");
+}
+
+
+
+
+function stringmaker($string,$campo,$c_mysql, $cont,$x) {
+
+if($campo != null) {
+
+	if($x < 1 && $cont == 0) {
+	$valor = "%" . $campo . "%";
+	$string = $string. "`$c_mysql` like '$valor'";
+	}
+	elseif($x < 1 && $cont > 0) {
+	$valor = "%" . $campo . "%";
+	$string = $string. " and `$c_mysql` like '$valor'";
+	}
+	elseif($x == 1 && $cont == 0) {
+	list($dia,$mes,$ano) = explode("-", $campo);
+	$campo = $ano . "-" . $mes . "-" . $dia;
+	$string = $string . "`$c_mysql` > '$campo'";
+	}
+	elseif($x == 1 && $cont > 0) {
+	list($dia,$mes,$ano) = explode("-", $campo);
+	$campo = $ano . "-" . $mes . "-" . $dia;
+	$string = $string . " and `$c_mysql` > '$campo'";
+	}
+	elseif($x == 2 && $cont == 0) {
+	list($dia,$mes,$ano) = explode("-", $campo);
+	$campo = $ano . "-" . $mes . "-" . $dia;
+	$string = $string . "`$c_mysql` < '$campo'";
+	}
+	elseif($x == 2 && $cont > 0) {
+	list($dia,$mes,$ano) = explode("-", $campo);
+	$campo = $ano . "-" . $mes . "-" . $dia;
+	$string = $string . " and `$c_mysql` < '$campo'";
+	}
+}
+
+return $string;
+}
+
+function contador($cont,$campo) {
+	if($campo != null) {
+	$cont++;
+	}
+return $cont;
+}
+
+
+//Inicializando váriaveis;
+$cont = 0;
+$string = "SELECT* FROM `tabelacptx` WHERE `tr` = '$_SESSION[log_tx]' and ";
+
+//Gerando exceções
+if($_GET['data_i'] == $_GET['data_f'] && $_GET['data_i'] != null) {
+
+list($ano,$mes,$dia) = explode("-", $_GET['data_i']);
+$dia1 = $dia - 1;
+$dia2 = $dia + 1;
+$_GET['data_i'] = $ano . "-" . $mes . "-" . $dia1;
+$_GET['data_f'] = $ano . "-" . $mes . "-" . $dia2;
+}
+else {
+	if ($_GET['data_i'] != '' && $_GET['data_f'] == '') {
+	list($ano,$mes,$dia) = explode("-", $_GET['data_i']);
+	$dia1 = $dia - 1;
+	$_GET['data_i'] = $ano . "-" . $mes . "-" . $dia1;
+	}
+	if ($_GET['data_f'] != '' && $_GET['data_f'] == '') {
+	list($ano,$mes,$dia) = explode("-", $_GET['data_f']);
+	$dia2 = $dia + 1;
+	$_GET['data_f'] = $ano . "-" . $mes . "-" . $dia2;
+	}
+}
+
+//Definindo campos
+$matriz[0][0] = $_GET['ccto'];
+$matriz[0][1] = "circuito";
+
+$matriz[1][0] = $_GET['data_i'];
+$matriz[1][1] = "data_e";
+
+$matriz[2][0] = $_GET['data_f'];
+$matriz[2][1] = "data_e";
+
+for($x=0; $x<3; $x++) {
+
+$string = stringmaker($string,$matriz[$x][0],$matriz[$x][1],$cont,$x);
+$cont = contador($cont,$matriz[$x][0]);
+
+}
+
+?>
+<html>
+<head>
+
+<script language="JavaScript">
+function deletor(id) {
+var confirma = confirm("Tem certeza que deseja deletar o circuito " + id + "?",500,600);
+	if(confirma) {
+	document.location.href= "redirecionar.php?apagar=1&circ=" + id; 
+	}
+	else {
+	alert("Acao cancelada!");
+	}
+
+}
+
+var win = null;
+function NovaJanela(pagina,nome,w,h,scroll){
+	LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+	TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+	settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars=auto,status=0,toolbar=0,location=0,menubar=0';
+	win = window.open(pagina,nome,settings);
+}
+
+function cns3(data) {
+
+document.getElementById("consulta3").src = "consulta3.php?mes=nada&dia=" + data;
+
+}
+
+
+</script>
+<style type="text/css">
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #333333;
+}
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+
+</style>
+
+<style type="text/css">
+#topo {
+	background-color:#FFFFFF;
+	top: 0px;
+
+}
+
+#Layer1 {
+	position:absolute;
+	left:36px;
+	top:32px;
+	width:255px;
+	height:233px;
+	z-index:1;
+}
+
+table.bordasimples { font-family: Arial, Helvetica, sans-serif;  border-collapse: separate; font-size: 12px;}
+table.bordasimples th {border: 1px solid #000000; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; font-weight: bold; font-size: 13px;}
+table.bordasimples tr td {border:1px solid #000000;}
+.style35 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<table width="100%" height="400px" border="0">
+  <tr>
+    <td valign="top">
+
+<table width="320px" height="175px" border="0">
+    <tr>
+      <td height="23" align="center" class="style35">
+<?php 
+	echo "ieie";echo "<a href='consulta2.php?";
+	if(isset($_GET['ano'])) {
+		echo "ano=$_GET[ano]";  //falta fazer para o ano
+			if(isset($_GET['mes'])) {
+			echo"&mes=$_GET[mes]";
+			}
+			else {
+			echo "&mes=" . date("m");
+			}
+	}
+	echo "'>"; echo num_mes($mesg) . "</a> - <span style=\"cursor: pointer;\" onclick=\"NovaJanela('grafico_prot.php?";
+	if(isset($_GET['ano'])) {
+		echo "ano=$_GET[ano]";  //falta fazer para o ano
+			if(isset($_GET['mes'])) {
+			echo"&mes=$_GET[mes]";
+			}
+	}
+
+	 echo "','graf','1100','550','yes');\">";
+echo "<img src='imagens/graph_icon.bmp' width='25px' height='25px'></span>";
+
+?></td>
+    </tr>
+    <tr>
+      <td>
+		<table width="290px" height="auto" border="0" align="center" class="bordasimples">
+			<tr align="center" bgcolor="#00CC33" height='30px'>
+				<th>D</th>
+				<th>S</th>
+				<th>T</th>
+				<th>Q</th>
+				<th>Q</th>
+				<th>S</th>
+				<th>S</th>
+			</tr>
+<?php
+		
+		$con = conectar();
+		
+
+		if(!isset($_GET['mes'])) {
+			$andar = jddayofweek(cal_to_jd(CAL_GREGORIAN, date("m"), 1, $ano),0);
+
+			if($andar != 0 ) {
+				echo "<tr align='center' height='30px'>";
+					for($i=0;$i<$andar;$i++) {
+					echo "<td>&nbsp;</td>";
+					}
+			}
+
+			for($x=1+$andar; $x<cal_days_in_month(CAL_GREGORIAN, date("m"), $ano)+1+$andar; $x++){
+			$dia = $x - $andar;
+			if(strlen($dia) == 1) {
+					$dia = "0" . $dia;
+			}
+
+			$data = $ano . "-" . date("m") . "-" . $dia;
+
+			$query = mysql_query("SELECT* FROM `tabelacptx` WHERE `data_e` = '$data' and `tr` = '$_SESSION[log_tx]'");
+			$lin = mysql_num_rows($query);
+				if($x%7 == 1) {
+					echo "<tr align='center' height='30px'>";
+				}
+			echo "<td>";
+				if($lin > 0) {
+					echo "<div style='cursor: pointer; color: blue; font-weight:bold;' onClick='javascript: cns3(\"$data\")'>$dia</div>";
+				}
+				else {
+					echo $dia;
+				}
+		echo "</td>";
+				if($x%7 == 0) {
+					echo "</tr>";
+				}
+			}//termina for
+
+
+		} //termina IF
+
+
+		else {
+			$andar = jddayofweek(cal_to_jd(CAL_GREGORIAN, $_GET['mes'], 1, $ano),0);
+
+			if($andar != 0 ) {
+				echo "<tr align='center' height='30px'>";
+					for($i=0;$i<$andar;$i++) {
+					echo "<td>&nbsp;</td>";
+					}
+			}
+			for($x=1+$andar; $x<cal_days_in_month(CAL_GREGORIAN, $_GET['mes'], $ano)+1+$andar; $x++){
+			$dia = $x - $andar;
+
+			if(strlen($dia) == 1) {
+					$dia = "0" . $dia;
+			}
+
+			$data = $ano . "-" . $_GET['mes'] . "-" . $dia;
+
+			$query = mysql_query("SELECT* FROM `tabelacptx` WHERE `data_e` = '$data' and `tr` = '$_SESSION[log_tx]'");
+			$lin = mysql_num_rows($query);
+				if($x%7 == 1) {
+					echo "<tr align='center' height='30px'>";
+				}
+			echo "<td><span class='style37'>";
+				if($lin > 0) {
+					echo "<div style='cursor: pointer; color: blue; font-weight:bold;' onClick='javascript: cns3(\"$data\")'>$dia</div>";
+				}
+				else {
+					echo $dia;
+				}
+		echo "</span></td>";
+				if($x%7 == 0) {
+					echo "</tr>";
+				}
+			}//termina for
+
+		}
+	mysql_close($con);
+?>
+
+      </table></td>
+    </tr>
+  </table></td>
+    <td rowspan='2' width="702">
+<?php
+echo "<iframe src='consulta3.php?";
+if(isset($_GET['mes'])) {
+ echo "mes=$_GET[mes]&";
+}
+if(isset($_GET['ano'])) {
+ echo "ano=$_GET[ano]";
+}
+
+ echo "' id='consulta3' width='100%' height='100%' frameborder='0' scrolling='auto'></iframe>";
+
+?>
+</td>
+  </tr>
+<tr>
+<td><img src='graf_consulta.php'></td>
+</tr>
+</table>
+</body>

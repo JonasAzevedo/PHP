@@ -1,0 +1,27 @@
+<?php
+// connect to database
+$connection = mysql_connect('localhost', 'mylogin', 'mypassword')
+or die('Cannot connect to MySQL');
+
+mysql_select_db('mydatabase')
+or die('Cannot connect to database');
+
+// clear the table down
+$sql = "TRUNCATE TABLE mytable";
+
+// run the first query to clear table
+mysql_query($sql) or die(mysql_error());
+
+// set up query to import data, assuming the
+// csv file is at the top level of the C drive
+$sql = "LOAD DATA LOCAL INFILE 'test.csv'
+INTO TABLE mytable
+FIELDS
+TERMINATED BY ','
+LINES
+TERMINATED BY '\r\n'";
+
+// run the query to load the data
+mysql_query($sql) or die(mysql_error());
+
+?>

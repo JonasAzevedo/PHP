@@ -1,0 +1,30 @@
+/*
+.input {
+    border: 1px solid #006;
+    background: #ffc;
+}
+.input:hover {
+    border: 1px solid #f00;
+    background: #ff6;
+}
+*/
+.button1 {
+    border: none;
+    background: url('up.png') no-repeat top left;
+    padding: 2px 8px;
+}
+.button1:hover {
+    border: none;
+    background: url('down.png') no-repeat top left;
+    padding: 2px 8px;
+}
+/*
+label {
+    display: block;
+    width: 150px;
+    float: left;
+    margin: 2px 4px 6px 4px;
+    text-align: right;
+}
+br { clear: left; }
+*/

@@ -1,0 +1,256 @@
+/*******************************************************************
+********************************************************************
+  Nome: cPgComprarProduto.css
+  Função: página css da pgComprarProduto.php
+  Data de Criação: 15/02/2011 - 09:29
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+*******************************************************************/
+
+
+html, body {
+    height: 100%;
+}
+
+
+.divCompProdCabecalho{
+    float:left;
+    border: 1px solid;
+    width: 100%;
+    height: 20%;
+}
+
+
+.divCompProdLateralDireita{
+    float:left;
+    border: 1px solid;
+    width: 20%;
+    height: 78%;
+}
+
+
+.divCompProdConteudo{
+    float:left;
+    border: 0px solid;
+    width: 59%;
+    height: 78%;
+}
+
+.divCompProdConteudoBranco{
+    float:left;
+    border: 1px solid;
+    width: 59%;
+    height: 78%;
+}
+
+
+.divCompProdLateralEsquerda{
+    float:left;
+    border: 0px solid;
+    width: 20%;
+    height: 78%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.divCompProdDadosImagemProduto{
+    float:left;
+    border: 0px solid;
+    background: #FFE4B5;
+    width: 100%;
+    height: 60%;
+}
+
+.divCompProdImagemProduto{
+    float:left;
+    border: 0px solid;
+    border-color: #123;
+    margin-left: 5px;
+    width: 32%;
+    height: 100%;
+}
+
+
+/*.divCompProdImgProdNome{
+    float:left;
+    border: 0px solid;
+    width: 100%;
+    height: 6%;
+} */
+
+
+/*.divCompProdImgProdImagem{
+    float:left;
+    border: 0px solid;
+    width: 100%;
+    height: 93%;
+} */
+
+
+.divCompProdDados{
+    float:left;
+    border: 0px solid;
+    background: #FFE4B5;
+    width: 100%;
+    height: 30%;
+}
+
+
+.divCompProdComprar{
+    float:left;
+    border: 0px solid;
+    background-color: #009933;
+    width: 85%;
+    height: 10%;
+}
+
+
+.divCompProdVoltar{
+    float:left;
+    border: 0px solid;
+    background-color: #009933;
+    width: 15%;
+    height: 10%;
+}
+
+
+.spnVlrCompProdNomeImagem{
+    display: table;
+    border: 0px solid;
+    margin-left: 5px;
+    font-size: 10px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+    width: 100%;
+    height: 5%;
+}
+
+
+.imgComProdFiguraProduto{
+    border: 0px solid;
+    width: 100%;
+    height: 93%;
+}
+
+
+.spnCompProdTituloCaracProduto{
+    font-size: 15px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+
+
+.spnVlrCompProdCaracProduto{
+    font-size: 15px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+#spnVlrCompProdCaracProdutoGrupoSubGrupo{
+    font-size: 15px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+
+#spnVlrCompProdCaracProdutoValorAntigo{
+    text-decoration: line-through;
+}
+
+#spnCompProdTituloCaracProdutoValorDesconto{
+    margin-left: 20px;
+}
+
+
+.spnTituloCompProdQtde, .spnTituloCompProdTamanho{
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: Times, Georgia, serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+
+
+#spnTituloCompProdTamanho{
+    margin-left: 30px;
+}
+
+
+.txtCompProdQtdeCompra{
+    width: 30px;
+    height: 20px;
+    font-size: 15px;
+    font-family: Times, Georgia, serif;
+    font-weight: normal;
+}
+
+select {
+    background-color: #B0E0E6;
+    width: 90px;
+    height: 25px;
+    font-size: 15px;
+    font-family: Times, Georgia, serif;
+    font-weight: normal;
+}
+
+
+.imgFiguraCarrinho{
+    margin-left: 180px;
+    border: 0px solid;
+    width: 25%;
+    height: 10%;
+}
+
+
+/*table 'tblMeuCarrinho'*/
+#tblMeuCarrinho{
+    width: 100%;
+    margin: 0px;
+    font-family: Times, Georgia, serif;
+    font-size: 12px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#tblMeuCarrinho th{
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#tblMeuCarrinho td{
+    background: #e8edff;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #fff;
+    border: 1px;
+    color: #669;
+    padding: 8px;
+}
+
+#tblMeuCarrinho tr:hover td{
+    background: #d0dafd;
+    color: #339;
+}
+/*fim - table 'tblMeuCarrinho'*/
+
+.spnValorTotal{
+    display: block;
+    margin: 10px;
+    color: #039;
+    font-family: Times, Georgia, serif;
+    font-size: 12px;
+    font-weight: normal;
+}

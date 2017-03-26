@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Poutz! Modais com jQuery</title>
+<link href="modais.css" rel="stylesheet" type="text/css" />
+<style>
+#modais {display:none}
+</style>
+    <script type="text/javascript" src="./jQuery/js/jquery-1.3.2.min.js"></script>
+    <script src="./jQuery/js/jquery.modal.js"></script>
+
+<script>
+$(function() {
+	$('#botaoDinamico').click(
+		function() {
+			var parametros = {
+				id: 'modalDinamico',
+				title: 'Minha modal dinâmica',
+				width: 450,
+				url : 'ajax.html',
+				isDrag  : true,
+				isFixed : true,
+				buttons : [{name: 'Faça alguma coisa', id: 'botaoAcao1', action: 'alert(\'Ação executada com sucesso 1!\')'}]
+			}
+			$('body').modal(parametros);
+		}
+	);
+
+	$('#botaoEstatico').click(
+		function() {
+			var parametros = {
+				id: 'modalEstatico',
+				title: 'Minha modal estática',
+				width: 450,
+				container: $('#modalEstatica'),
+				isDrag  : true,
+				isFixed : true,
+				buttons : [{name: 'Faça alguma coisa', id: 'botaoAcao2', action: 'alert(\'Ação executada com sucesso 2!\')'},
+				           {name: 'Faça outra coisa',  id: 'botaoAcao3', action: 'alert(\'Ação executada com sucesso 3!\')'}
+						  ]
+			}
+			$('body').modal(parametros);
+		}
+	);
+
+});
+
+function closeModal(modal) {
+	$('#' + modal).hide();
+}
+</script>
+</head>
+
+<body>
+
+<button id="botaoDinamico">Abrir modal com conteúdo dinâmico</button>&nbsp;&nbsp;
+<button id="botaoEstatico">Abrir modal com conteúdo estático</button>
+
+<div id="modais">
+	<div id="modalEstatica">
+	conteúdo da modal de testes
+	</div>
+
+</div>
+
+</body>
+</html>
+

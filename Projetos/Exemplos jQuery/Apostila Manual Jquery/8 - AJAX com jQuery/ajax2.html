@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+
+<script type='text/javascript' src='../jQuery/js/jquery-1.4.4.min.js'></script>
+<script>
+$(document).ready(function(){
+	$("#enlaceajax").click(function(evento){
+		evento.preventDefault();
+		$("#destino").load("respostaAJAX.php", {nome: "Pepe", idade: 45}, function(){
+			alert("recebidos os dados por ajax");
+		});
+	});
+})
+</script>
+</head>
+
+<body>
+
+<a href="#" id="enlaceajax">Clique aqui!</a>
+<br>
+<div id="destino"></div>
+
+
+
+</body>
+</html>

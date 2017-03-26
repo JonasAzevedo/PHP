@@ -1,0 +1,5 @@
+STATUS DAS ROTAS SDH
+
+0 = cadastrada
+1 = editada
+2 = deletada

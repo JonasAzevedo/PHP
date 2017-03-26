@@ -1,0 +1,384 @@
+/*******************************************************************
+********************************************************************
+  Nome: cPgCadastroUsuario.css
+  Função: página css da pgCadastroUsuario.php
+  Data de Criação: 09/02/2011 - 15:58
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+********************************************************************/
+
+html, body {
+    height: 100%;
+}
+
+.divCadastroUsuarios{
+    display: block;
+    float:left;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+}
+
+.divCadUsuarioCabecalho{
+    display: block;
+    float:left;
+    width: 100%;
+    height: 15%;
+    border: 1px solid blue;
+}
+
+.divCadUsuarioConteudo{
+    display: block;
+    float:left;
+    width: 85%;
+    height: 84%;
+    border: 1px solid green;
+}
+
+.divTituloCadUsuario{
+    display: block;
+    float:left;
+    width: 100%;
+    height: 4%;
+    border: 0px;
+    margin-top: 1%;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    font-family: Verdana, Arial, Trebuchet, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: uppercase;
+}
+
+.divCadUsuarioLinhaDados{
+    display: block;
+    float: left;
+    width: 90%;
+    border: 0px;
+    margin-left: 8%;
+    margin-top: 2px;
+}
+#divCadUsuarioLinhaComplemento{
+    border: 0px;
+}
+
+.divCadUsuarioLinhaTexto{
+    display: block;
+    float: left;
+    width: 80%;
+    height: 35px;
+    border: 0px;
+    margin: 5px;
+    margin-left: 8%;
+}
+
+.divCadUsuarioBotoes{
+    display: block;
+    float: left;
+    width: 90%;
+    height: 10%;
+    border: 1px solid;
+    margin-top: 2%;
+    margin-left: 8%;
+}
+
+.divCadUsuarioLatDireita{
+    display: block;
+    float:left;
+    width: 14%;
+    height: 84%;
+    border: 1px solid black;
+}
+
+.spnTituloCadUsuario{
+    float: left;
+    width: 15%;
+    border: 0px;
+    font-size: 14px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    text-transform: capitalize; /*1ª letra de cada palavra em maiúsculo*/
+}
+
+.lblTituloCadUsuario{
+    float: left;
+    width: 15%;
+    border: 0px;
+    font-size: 14px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    text-transform: capitalize; /*1ª letra de cada palavra em maiúsculo*/
+}
+
+.spnInformacaoCadUsuario{
+    display: none;
+    float: left;
+    width: 35%;
+    border: 0px;
+    margin-left: 2%;
+    margin-top: 0.5%;
+    color: green;
+    font-size: 12px;
+    font-family: Verdana, Arial, Trebuchet, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: normal;
+}
+
+.txtValorCadUsuario{
+    float: left;
+    height: 80%;
+    margin-left: 1%;
+    font-size: 12px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+#txtValorCadUsuarioNome{
+    width: 65%;
+}
+
+#txtValorCadUsuarioApelido{
+    width: 30%;
+}
+
+#txtValorCadUsuarioEmail{
+    width: 60%;
+    text-transform: lowercase;
+}
+
+#txtValorCadUsuarioTelefone{
+    width: 20%;
+}
+
+#txtValorCadUsuarioDataNascimento{
+    width: 18%;
+}
+
+.rdGrupoSexo{
+    margin-left: 1%;
+}
+
+.spnSexo{
+    margin-left: 1%;
+    font-size: 14px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+#spnTituloCadUsuarioEndereco, #spnTituloCadUsuarioLogin{
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 15px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+#txtValorCadUsuarioEnderecoUF{
+    width: 6%;
+    text-transform: uppercase;
+}
+
+#txtValorCadUsuarioEnderecoCidade{
+    width: 60%;
+}
+
+#txtValorCadUsuarioEnderecoCEP{
+    width: 20%;
+}
+
+
+.lnkBuscarCEP{
+    float: left;
+    display: block;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 10px;
+    font-family: Verdana, Arial, Trebuchet, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: normal;
+}
+.lnkBuscarCEP:link{ /*define o estilo do link no estado inicial*/
+    text-decoration: none;
+}
+.lnkBuscarCEP:visited{ /*define o estilo do link visitad*/
+    text-decoration: none;
+}
+.lnkBuscarCEP:hover{ /*define o estilo do link quando passa-se o mouse sobre ele*/
+    text-decoration: underline;
+    color: #FF0000;
+}
+.lnkBuscarCEP:active{ /*define o estilo do link ativo (o que foi clicado).*/
+    text-decoration: none;
+}
+
+
+#txtValorCadUsuarioEnderecoBairro{
+    width: 60%;
+}
+
+#txtValorCadUsuarioEnderecoRua{
+    width: 60%;
+}
+
+#txtValorCadUsuarioEnderecoNumero{
+    width: 10%;
+}
+
+#txtAreaValorCadUsuarioEnderecoComplemento{
+    margin-left: 1%;
+    width: 65%;
+    height: 80%;
+}
+
+#txtValorCadUsuarioLogin{
+    width: 30%;
+    height: 80%;
+    text-transform: lowercase;
+}
+
+.txtValorCadUsuarioSenha{
+  float: left;
+  width: 30%;
+  height: 80%;
+  margin-left: 1%;
+  font-size: 12px;
+  font-family: Trebuchet, Verdana, Arial, sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: lowercase;
+}
+
+
+.tblNivelSenha{
+    display: none;
+}
+
+.btnSalvar{
+    float: left;
+    background: url('./figuras/up.png') no-repeat top left;
+    border: 1px solid;
+    width: 20%;
+    height: 100%;
+    margin-left: 10%;
+}
+.btnSalvar:hover {
+    background: url('./figuras/down.png') no-repeat top left;
+    border: none;
+    cursor: pointer;
+}
+
+.btnLimpar{
+    float: left;
+    background: url('./figuras/up.png') no-repeat top left;
+    border: 1px solid;
+    width: 20%;
+    height: 100%;
+    margin-left: 1%;
+}
+.btnLimpar:hover {
+    background: url('./figuras/down.png') no-repeat top left;
+    border: none;
+    cursor: pointer;
+}
+
+.btnCancelar{
+    float: left;
+    background: url('./figuras/up.png') no-repeat top left;
+    border: 1px solid;
+    width: 20%;
+    height: 100%;
+    margin-left: 1%;
+}
+.btnCancelar:hover {
+    background: url('./figuras/down.png') no-repeat top left;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* lateral direita */
+.aLnkOpcLatDireita{
+
+}
+
+/* div's que são mostradas através dos links */
+.divCadUsuarioOpcLatDireita{
+    position: fixed;
+    display: none;
+    background-color: transparent;
+    left: 60%;
+    top: 40%;
+    width: 20%;
+    height: 40%;
+}
+
+.divLinkFechar{
+    border: 0px;
+    background-color: transparent;
+    width: 100%;
+    height: 8%;
+}
+.divPopupConteudo{
+    background-color: yellow;
+    width: 100%;
+    height: 90%;
+}
+        
+        
+#divCadUsuarioQuemSomos{
+/*    background-color: yellow;*/
+    left: 60%;
+    top: 20%;
+    width: 20%;
+    height: 40%;
+}
+#divCadUsuarioVantagens{
+    background-color: black;
+    left: 60%;
+    top: 30%;
+    width: 20%;
+    height: 40%;
+}
+#divCadUsuarioServicosOferecidos{
+    background-color: green;
+    left: 60%;
+    top: 40%;
+    width: 20%;
+    height: 40%;
+}
+#divCadUsuarioPrivacidade{
+    background-color: red;
+    left: 60%;
+    top: 50%;
+    width: 20%;
+    height: 40%;
+}
+#divCadUsuarioFaleConosco{
+    background-color: blue;
+    left: 60%;
+    top: 60%;
+    width: 20%;
+    height: 40%;
+}
+
+.aLnkFechar{
+    float: right;
+    clear: both;
+}
+
+/* fim - div's que são mostradas através dos links */
+/* fim - lateral direita */

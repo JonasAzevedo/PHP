@@ -1,0 +1,79 @@
+    body{
+       overflow-y: hidden;
+       background-repeat: repeat-y;
+       background-color: #FFFFFF;
+       background-position: center;
+       background-image:url(fundo.png);
+       margin-top: 0;
+    }
+    
+    div.divisaoDados_1{
+       position: absolute;
+       width: 416px;
+       height: 600px;
+       margin: 0px;
+       margin-top: 3px;
+       margin-left: 212px;
+       /*border: 1px solid;*/
+       border: 1px solid;
+    }
+    
+    div.divisaoDados_2{
+       position: absolute;
+       width: 416px;
+       height: 600px;
+       margin: 0px;
+       margin-top: 3px;
+       margin-left: 632px;
+       /*border: 1px solid;*/
+       border: 1px solid;
+    }
+    
+    p.titulo{
+      position: relative;
+      text-align: center;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    span.campoPesquisa {
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    
+    
+  input.pesquisar{
+		position: relative;
+		width: 75px;
+		height: 22px;
+		background: #ABAB54;
+		color: #000000;
+		margin: 0px;
+		font-family: Verdana;
+		font-size: 10px;
+		font-weight: bold;
+		border: 0px solid;
+    }
+    
+    #selAno{
+      width: 35px;
+    }
+    
+    #selMes{
+      width: 35px;
+    }
+
+    #selFilialCirc{
+      width: 45px;
+    }
+
+    #edCircuito{
+      width: 75px;
+    }

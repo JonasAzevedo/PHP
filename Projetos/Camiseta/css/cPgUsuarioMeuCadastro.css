@@ -1,0 +1,73 @@
+/*******************************************************************
+********************************************************************
+  Nome: cPgUsuarioMeuCadastro.css
+  Função: página css da pgUsuarioMeuCadastro.php
+  Data de Criação: 10/03/2011 - 08:12
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+********************************************************************/
+
+html, body {
+    height: 100%;
+}
+
+
+/*div principal*/
+.divMeuCadastro{
+    float:left;
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+}
+
+
+.divMeuCadastroCabecalho{
+    float:left;
+    border: 1px solid;
+    width: 100%;
+    height: 15%;
+}
+
+
+.divMeuCadastroLateralEsquerda{
+    float:left;
+    border: 1px solid;
+    width: 10%;
+    height: 84%;
+}
+
+.divLatEsqMeuCadastro{
+    float:left;
+    border: 1px solid;
+    width: 100%;
+    height: 15%;
+}
+
+.divLatEsqPedidos{
+    float:left;
+    border: 1px solid;
+    width: 100%;
+    height: 15%;
+}
+
+.divLatEsqServicos{
+    float:left;
+    border: 1px solid;
+    width: 100%;
+    height: 15%;
+}
+
+.divLatEsqAvaliacoes{
+    float:left;
+    border: 1px solid;
+    width: 100%;
+    height: 15%;
+}
+
+.divMeuCadastroConteudo{
+    float:left;
+    border: 1px solid;
+    width: 89%;
+    height: 84%;
+}

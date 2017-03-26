@@ -1,0 +1,55 @@
+<html>
+  <!-- seleciona arquivo .CSV para ser importado para BD
+  Jonas da Silva Azevedo
+  Criado: 20/01/2010
+  !-->
+  <head>
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <title>Envia Arquivo .CSV para BD</title>
+  </head>
+  <body>
+    <center>
+      <a href='index.php'>Principal</a>
+    </center>
+    <center><h2>Enviar arquivo de OS's Encerradas para Base de Dados</h2>
+    <br/>
+    <form name="frmEnvioArquivoCSV" method="post" action="importaCSV.php" enctype="multipart/form-data">
+      <table>
+        <tr>
+          <td>
+            <b>Selecione o Arquivo:</b><br>
+            <input type="file" name="edArquivo"  class="file1"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <br>
+            <b>Delimitador de campos:</b><br>
+            <input type="text" name="edDelimitador" value=";" class="text1" maxlength="1"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <br/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="submit" value="Enviar" class="buttons1" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    </center>
+    <center>
+      <br>
+      <b>
+        Regras para importação do arquivo .CSV:<br><br><br>
+      </b>
+      1 - Delete o cabeçalho do arquivo <br>
+      2 - Retire todos os delimitadores de campo do arquivo .CSV <br>
+      3 - Retire todas as aspas simples (') do arquivo .CSV <br>
+      4 - É recomendável que o tamanho do arquivo não seja superior à 8MB <br>
+      5 - Caso algum ID não foi importado (mensagem no final do processo), anote o ID e comunique o DBA <br>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<?php
+
+include("funcoes.php");
+
+conectar();
+
+if($_GET['mod'] == 'inserir') {
+
+if(!isset($_POST['data_e'])){
+$_POST['data_e'] = "";
+}
+
+if($_POST['data_e'] == null || $_POST['data_e'] == '') {
+$hoje = hoje();
+}
+else {
+return; //verificar se está dentro dos 3 dias permitidos
+}
+
+if(ver_tam($_POST['t_circuito'],7) == false) {
+return; //redirecionar para erro.php mensagem de erro
+}
+
+if($_POST['t_filial'] == null || $_POST['t_filial'] == '' || $_POST['t_filial'] == '#') {
+return; //erro de não selecionada a filial
+}
+
+if($_POST['t_velocidade'] == null || $_POST['t_filial'] == '') {
+return; //erro de selecionar uma velocidade
+}
+else {
+	if($_POST['t_velocidade'] == 'E1') {
+	$tipo = 'E1';
+	}
+	else {
+	$tipo = 'FE';
+	}
+}
+
+
+
+$query = mysql_query("INSERT INTO `tabelacptx`(`tr`,`filial`,`circuito`,`velocidade`,`tipo`,`data_e`) VALUES('$_SESSION[log_tx]','$_POST[t_filial]','$_POST[t_circuito]','$_POST[t_velocidade]','$tipo','$hoje')");
+ver_mysql($query);
+inserir_comentario($_POST['t_circuito'],$_POST['t_filial'],$_POST['t_comentario']);
+
+
+
+echo "
+<script language=\"javascript\">
+location.href=\"confirmacao.html\"
+</script>";
+
+}
+
+?>

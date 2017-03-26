@@ -1,0 +1,72 @@
+    table.OSs {
+      position: relative;
+      width: 450px;
+      text-align: center;
+      font-family: verdana, helvetica, arial, sans-serif;
+      border-collapse: separate;
+      font-size: 11px;
+      margin: 0px;
+      margin-top: 20px;
+      margin-left: 20px;
+      border: 0px solid;
+      padding: 0px;
+    }
+
+    table.OSs th {
+      height: 10px;
+      color: #400040;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      margin: 0px;
+      padding: 5px;
+      border: 1px solid #000000;
+    }
+
+    table.OSs tr{
+      text-align: center;
+      height: 35px;
+      border: 0px solid;
+
+    }
+
+    table.OSs tr td {
+      border-left: 0px solid;
+    }
+    
+    div.divInf{
+      position: relative;
+      text-align: center;
+      margin: 0px;
+      margin-top: 20px;
+      border: 0px solid;
+    }
+
+    span.spnCabecalho{
+      position: relative;
+      margin: 0px;
+      margin-top: 20px;
+      margin-left: 70px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    
+    span.spnTotalIDs{
+      position: relative;
+      margin: 0px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    
+    span.spnNenhumaOS{
+      position: relative;
+      margin: 0px;
+      margin-top: 100px;
+      margin-left: 170px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+    }
+

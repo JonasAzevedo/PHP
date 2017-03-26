@@ -1,0 +1,65 @@
+/*******************************************************************
+********************************************************************
+  Nome: cPgExibirProdutosRelacionados.css
+  Função: página css da pgExibirProdutosRelacionados.php
+  Data de Criação: 21/03/2011 - 21:31
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+********************************************************************/
+
+html, body {
+    height: 100%;
+}
+
+/*div principal*/
+.divExibirProdutosRelacionados{
+    float:left;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+}
+
+.spnDescExibirProdutoRelacionais{
+    float: left;
+    width: 99%;
+    height: 5%;
+    border: 1px solid;
+    font-size: 12px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.divSlideShow{
+    position:relative;
+    display: block;
+    float:left;
+    width: 70%;
+    height: 30%;
+    margin:0 auto;
+    margin-left: 15%;
+    margin-top: 3%;
+    border: 1px solid;
+}
+
+.divSlideShow a{
+    z-index:98;
+    position:absolute;
+    top:0;
+    left:0;
+
+}
+
+.divSlideShow a img{
+    width: 99%;
+    height: 99%;
+}
+
+.divSlideShow a.active{
+    z-index:100;
+}
+
+.divSlideShow a.last-active{
+    z-index:99;
+}

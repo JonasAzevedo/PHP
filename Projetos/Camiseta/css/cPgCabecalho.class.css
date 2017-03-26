@@ -1,0 +1,39 @@
+/*******************************************************************
+********************************************************************
+  Nome: cPgCabecalho.class.css
+  Função: página css da pgCabecalho.class.php
+  Data de Criação: 08/02/2011 - 14:18
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+********************************************************************/
+
+
+.divCabecalho{
+	float: left;
+	border: 0px solid;
+	width: 100%;
+	height: 15%;
+	background-color: #FFFFFF;
+}
+
+.divCabApresentacaoSite{
+    float: left;
+    border: 0px solid;
+    width: 55%;
+    height: 100%;
+}
+
+.divCabProdutosDestaque{
+    float: left;
+    border: 0px solid;
+    width: 20%;
+    height: 100%;
+}
+
+.divCabLoginIdentificacaoUsuario{
+    float: left;
+    border: 0px solid;
+    width: 24%;
+    height: 100%;
+}

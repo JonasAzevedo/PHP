@@ -1,0 +1,330 @@
+    body{
+      overflow-y: hidden;
+      background-repeat: repeat-y;
+      background-color: #FFFFFF;
+      background-position: center;
+      background-image:url(fundo.png);
+      margin-top: 0;
+    }
+    
+    div.grupoAusencias{
+      position: relative;
+      width: 750px;
+      height: 465px;
+      margin: 0px;
+      margin-top: 10px;
+      margin-left: 250px;
+      border: 0px solid;
+    }
+    
+    div.grupoPaginacao{
+      position: relative;
+      text-align: center;
+      width: 750px;
+      height: 15px;
+      margin: 0px;
+      margin-top: 5px;
+      margin-left: 250px;
+      border: 0px solid;
+    }
+    
+    div.grupoCadastro{
+      position: relative;
+      width: 750px;
+      height: 55px;
+      margin: 0px;
+      margin-top: 10px;
+      margin-left: 250px;
+      border: 0px solid;
+    }
+    
+    hr.divisao{
+      color: #000000;
+      width: 750px;
+      height: 1px;
+    }
+    
+    table.tblAusencias {
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 11px;
+      margin: 0px;
+      margin-top: 5px;
+      margin-left: 40px;
+      border: 0px solid;
+    }
+
+    table.tblAusencias th {
+      width: 150px;
+      color: #400040;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      border: 1px solid #000000;
+    }
+
+    table.tblAusencias tr{
+      text-align: center;
+      height: 50px;
+    }
+
+    table.tblAusencias tr td {
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-weight: normal;
+      font-size: 11px;
+      border: 0px;
+      border-bottom: 1px solid #808000;
+    }
+
+    
+    span.spnNovaAusencia{
+      color: #000000;
+      margin: 0px;
+      margin-top: 2px;
+      margin-left: 2px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    
+    span.spnDtaInicio{
+      color: #000000;
+      float: left;
+      margin: 0px;
+      margin-top: 2px;
+      margin-left: 110px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+    }
+    
+    span.spnDescricao{
+      color: #000000;
+      float: left;
+      margin: 0px;
+      margin-top: 2px;
+      margin-left: 12px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+    }
+    
+    input.edData{
+      float: left;
+      margin: 0px;
+      margin-left: 2px;
+      width: 70px;
+    }
+    
+    a.lnkData{
+	  position: relative;
+	  border: 0px solid;
+	  width: 16px;
+	  height: 16px;
+	  float: left;
+	  margin: 0px;
+	  margin-left: 1px;
+	  margin-top: 2px;
+   	  text-decoration: none;
+    }
+
+    textarea.txtAreaJustificativa{
+	  position: relative;
+	  border: 1px solid;
+      margin: 0px;
+      margin-left: 2px;
+	  width: 160px;
+	  height: 25px;
+	  float: left;
+    }
+    
+    a.lnkInserir{
+	  border-color: #999 #000 #000 #999; /* bordas esquerda,top,direita,base */
+	  position: relative;
+	  border: 1px solid;
+	  width: 10px;
+	  height: 1px;
+	  margin: 0px;
+	  padding: 6px 10px;
+	  background: #00CE67;
+	  color: #000;
+      font-family: verdana, helvetica, arial, sans-serif;
+	  font-size: 11px;
+	  font-weight: bold;
+	  text-align: center;
+	  text-decoration: none;
+    }
+
+    a.lnkInserir:hover	{
+	  position: relative;
+	  top: 1px;
+  	  left: 1px;
+	  border-color: #000 #999 #999 #000;
+	  background: #0DFF86;
+    }
+  
+    img.imgData{
+      border: 0px solid;
+    }
+  
+    a.lnkPgNormal{
+      position: relative;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 11px;
+      font-weight: normal;
+      margin: 0px;
+      margin-left: 3px;
+      margin-top: 3px;
+      border: 0px solid;
+      text-decoration: none;
+    }
+
+    a.lnkPgSelecionada{
+      position: relative;
+      color: #0000FF;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      margin: 0px;
+  	  margin-left: 3px;
+      margin-top: 3px;
+	  border: 0px solid;
+      text-decoration: none;
+    }
+  
+    span.spnNenhuma{
+      position: relative;
+      color: #000000;
+      margin: 0px;
+      top: 30;
+      margin-left: 200px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      border: 0px solid;
+    }
+
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* nao ocupadas */
+    div.grupoOpc{
+      position: relative;
+      width: 750px;
+      height: 400px;
+      margin: 0px;
+      margin-top: 10px;
+      margin-left: 250px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    div.grupoOpcDados{
+      position: relative;
+      float: left;
+      width: 750px;
+      margin-top: 10px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+
+    div.grupoOpcBotoes{
+      position: relative;
+      width: 750px;
+   	  height: 40px;
+   	  margin: 0px;
+      margin-top: 150px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+
+    p.titulo{
+      position: relative;
+      text-align: center;
+      width: 750px;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      margin-left: 0px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    span.descricao1{
+      color: #000000;
+      margin: 0px;
+      margin-left: 100px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    span.descricao2{
+      color: #000000;
+      float: left;
+      margin: 0px;
+      margin-left: 100px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+    span.descricao3{
+      color: #000000;
+      margin: 0px;
+      margin-left: 20px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+
+
+
+    
+    
+
+  a.lnkLimpar{
+		border-color: #999 #000 #000 #999; /* bordas esquerda,top,direita,base */
+		position: relative;
+		border: 1px solid;
+		width: 150px;
+		height: 30px;
+		margin: 0px;
+		padding: 10px 14px;
+		background: #00F078;
+		color: #000;
+		font-family: Verdana;
+		font-size: 11px;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		margin-left: 60px;
+  }
+
+  a.lnkLimpar:hover	{
+		position: relative;
+		top: 1px;
+		left: 1px;
+		border-color: #000 #999 #999 #000;
+		background: #0DFF86;
+  }

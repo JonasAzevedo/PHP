@@ -1,0 +1,190 @@
+/**
+ * forms.css
+ *
+ * Folha de estilos para controles de formulário.
+ *
+ * @author Eduardo Camilo Inácio <eduardo.inacio@om.netpoint.com.br>
+ * @copyright (C)2009 - 1 Gentleman & 3 Horses Development Group
+ * @version 1.0
+ * @since Version 1.0
+ */
+
+/**
+ * form
+ */
+form span.field {
+    display: block;
+    float: left;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+/**
+ * text
+ */
+form input.text1, form input.text2, form input.text3, form input.text4,
+form input.text5,form input.text6 {
+    font: bold 13px Verdana, Arial, sans-serif;
+    height: 18px;
+    border: solid 1px #AAA;
+    * margin-right: -10px;
+}
+form input.text1 {
+    width: 840px;
+}
+form input.text2 {
+    width: 408px;
+}
+form input.text3 {
+    width: 280px;
+}
+form input.text4 {
+    width: 208px;
+}
+form input.text5 {
+    width: 166px;
+}
+form input.text6 {
+    width: 100px;
+}
+
+/**
+ * password
+ */
+form input.passwd1, form input.passwd2, form input.passwd3, form input.passwd4,
+form input.passwd5 {
+    font: bold 13px Verdana, Arial, sans-serif;
+    height: 18px;
+    border: solid 1px #AAA;
+}
+form input.passwd1 {
+    width: 840px;
+}
+form input.passwd2 {
+    width: 408px;
+}
+form input.passwd3 {
+    width: 280px;
+}
+form input.passwd4 {
+    width: 208px;
+}
+form input.passwd5 {
+    width: 166px;
+}
+
+/**
+ * button
+ */
+form input.button1, form input.button2, form input.button3, form input.button4,
+form input.button5 {
+    height: 22px;
+    border: none;
+    color: #FFF;
+    background-color: #462552;
+}
+form input.button1 {
+    background: url("/visao/images/botao1.png");
+    width: 80px;
+    * background-image: none;
+    * filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src=/visao/images/botao1.png,sizingMethod='scale');
+}
+form input.button2 {
+    background: url("/visao/images/botao2.png");
+    width: 160px;
+    * background-image: none;
+    * filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src=/visao/images/botao2.png,sizingMethod='scale');
+}
+form input.button3 {
+    width: 200px;
+    background-color: black;
+}
+form input.button4 {
+    background: url("/visao/images/botao4.png");
+    width: 250px;
+    * background-image: none;
+    * filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src=/visao/images/botao4.png,sizingMethod='scale');
+}
+form input.button5 {
+    background: url("/visao/images/botao5.png");
+    width: 300px;
+    * background-image: none;
+    * filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src=/visao/images/botao5.png,sizingMethod='scale');
+}
+
+/**
+ * select
+ */
+form select.select1, form select.select2, form select.select3, 
+form select.select4, form select.select5, form select.select6 {
+    font: bold 12px Verdana, Arial, sans-serif;
+    border: solid 1px #AAA;
+    * margin-top: 1px;
+}
+form select.select1 {
+    width: 840px;
+}
+form select.select2 {
+    width: 408px;
+}
+form select.select3 {
+    width: 280px;
+}
+form select.select4 {
+    width: 208px;
+}
+form select.select5 {
+    width: 166px;
+}
+form select.select6 {
+    width: 90px;
+}
+
+/**
+ * textarea
+ */
+form textarea.text1, form textarea.text2, form textarea.text3, 
+form textarea.text4, form input.text5 {
+    font: bold 13px Verdana, Arial, sans-serif;
+    border: solid 1px #AAA;
+}
+form textarea.text1 {
+    width: 840px;
+}
+form textarea.text2 {
+    width: 408px;
+}
+form textarea.text3 {
+    width: 280px;
+}
+form textarea.text4 {
+    width: 208px;
+}
+form textarea.text5 {
+    width: 166px;
+}
+
+/**
+ * label
+ */
+form label.text1 {
+    font: bold 13px Verdana, Arial, sans-serif;
+}
+form label.error {
+	font: normal 10px Verdana, Arial, sans-serif;
+	color: #FF0000;
+	padding: 2px 15px 3px 20px;
+	background: url( '/visao/images/error.gif' ) no-repeat;
+	display: block;
+}
+form label.warning {
+	font: normal 10px Verdana, Arial, sans-serif;
+	color: #DAA520;
+	padding: 2px 15px 3px 20px;
+	background: url( '/visao/images/warning.gif' ) no-repeat;
+	display: block;
+}

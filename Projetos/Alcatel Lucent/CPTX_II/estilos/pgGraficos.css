@@ -1,0 +1,198 @@
+    body{
+       overflow-y: hidden;
+       background-repeat: repeat-y;
+       background-color: #FFFFFF;
+       background-position: center;
+       background-image:url(fundo.png);
+       margin-top: 0;
+    }
+    
+    div.grupoOpc{
+      position: relative;
+      width: 750px;
+      height: 64px;
+      margin: 0px;
+      margin-top: 10px;
+      margin-left: 250px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+    
+    div.grupoPesquisa{
+      position: relative;
+      width: 750px;
+      height: 30px;
+      margin: 0px;
+      margin-top: 10px;
+      margin-left: 0px;
+      /*border: 1px solid;*/
+      border: 0px solid;
+    }
+
+    p.titulo{
+      position: relative;
+      text-align: center;
+      width: 750px;
+      color: #000000;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+      margin: 0px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0px solid;
+    }
+    
+    span.spnTitulo{
+      color: #000000;
+      margin: 0px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    span.descricao1{
+      color: #000000;
+      margin-left: 10px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+    span.descricao2{
+      color: #000000;
+      margin: 0px;
+      margin-left: 10px;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    
+    img.imgBotaoOpc{
+      position: absolute;
+	  margin: 0px;
+	  top: 0px;
+      left: 0px;
+      width: 30px;
+      height: 25px;
+      border:0px solid;
+    }
+    
+    a.lnkPesquisar{
+	  position: relative;
+	  margin: 0px;
+      margin-left: 10px;
+	  width: 30px;
+	  height: 25px;
+	  text-decoration: none;
+    }
+
+    a.lnkPesquisar:hover{
+	  position: relative;
+      margin-left: 12px;
+    }
+    
+    table.tblDados{
+      position: relative;
+      text-align: center;
+      width: 750px;
+      margin: 0px;
+      margin-top: 30px;
+      margin-left: 250px;
+      font-family: arial, helvetica, sans-serif;
+      font-size: 16px;
+      border: 0px solid;
+    }
+    
+    table.tblDados tr.linha {
+	  width: 750px;
+      border: 0px solid;
+    }
+    
+    table.tblDados td.cabecalhoNomeDia {
+	  width: 150px;
+	  margin: 0px;
+      font-weight: 600;
+      border: 0px solid;
+      border-bottom: 2px solid;
+      border-right: 1px solid;
+      border-color: #000000;
+    }
+
+    table.tblDados td.cabecalhoDia {
+      width: 35px;
+      margin: 0px;
+      font-weight: 600;
+      border: 0px solid;
+	  border-bottom: 2px solid;
+      border-right: 1px solid;
+      border-color: #000000;
+    }
+
+    table.tblDados td.nomeDia {
+	  width: 150px;
+      border-right: 1px solid;
+      border-color: #000000;
+    }
+    
+    table.tblDados td.nomeDiaLink {
+      color: #4B8A13;
+      font-weight: 600;
+      width: 150px;
+      border: 0px solid;
+      border-right: 1px solid;
+      border-color: #000000;
+      cursor: pointer;
+    }
+
+    table.tblDados td.diaZero {
+      color: #000000;
+      font-weight: normal;
+      width: 35px;
+      border: 0px solid;
+      border-right: 1px solid;
+    }
+
+    table.tblDados td.diaDifZero {
+      color: #0000FF;
+      font-weight: 600;
+      width: 35px;
+      border: 0px solid;
+      border-right: 1px solid;
+      border-color: #000000;
+      cursor: pointer;
+    }
+    
+    table.tblDados td.rodapeNomeDia {
+	  width: 150px;
+	  margin: 0px;
+      font-weight: 600;
+      border: 0px solid;
+      border-top: 2px solid;
+      border-right: 1px solid;
+      border-color: #000000;
+    }
+
+    table.tblDados td.rodapeDiaZero {
+      color: #000000;
+      margin: 0px;
+      font-weight: normal;
+      width: 35px;
+      border: 0px solid;
+      border-top: 2px solid;
+      border-right: 1px solid;
+      border-color: #000000;
+    }
+
+    table.tblDados td.rodapeDiaDifZero {
+      color: #0000FF;
+      margin: 0px;
+      font-weight: 600;
+      width: 35px;
+      border: 0px solid;
+      border-top: 2px solid;
+      border-right: 1px solid;
+      border-color: #000000;
+      cursor: pointer;
+    }

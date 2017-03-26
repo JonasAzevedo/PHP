@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+<?php
+
+include("../funcoes.php");
+
+$con = conectar();
+
+$query = mysql_query("SELECT* FROM `tabelacptx`");
+
+while($row = mysql_fetch_array($query)) {
+
+$n = $row['n'];
+$ccto[$n] = $row['circuito'];
+$fil[$n] = $row['filial'];
+echo $ccto[$n] . "<br>";
+
+}
+mysql_free_result($query);
+
+$query = mysql_query("SELECT* FROM `comentarios`");
+
+while($row = mysql_fetch_array($query)) {
+$n = $row['n_circ'];
+mysql_query("UPDATE `comentarios` SET `n_circ` = '$ccto[$n]' WHERE `n_circ` = '$n'");
+mysql_query("UPDATE `comentarios` SET `filial` = '$fil[$n]' WHERE `n_circ` = '$n'");
+}
+
+?>
+
+</body>
+</html>

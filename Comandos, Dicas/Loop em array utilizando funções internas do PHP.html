@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es"><head>
+
+<title>Revista PHP - Otimizando até 90% loops em arrays utilizando o ponteiro interno de memoria do PHP</title>
+	<meta name="resource-types" content="document"/>
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta name="revisit-after" content="1"/>
+	<meta name="classification" content="Internet"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta name="Description" content="Revista PHP é a primeira revista do Brasil criada para desenvolvedores PHP."/>
+	<meta name="Keywords" content=" php, php4, php5, php6, smart, phpeclipse,zend,zend2, java, sql, mysql, postgresql, oracle,oci, phpmagazine, javascript, css, XHTML HTML, tableless, revista, magazine, XML, postgres, Zend Framework"/>
+	<meta name="robots" content="ALL"/>
+	<meta name="distribution" content="Global"/>
+	<meta name="ICBM" content="-20.2982,-40.3298" />
+	<meta name="DC.title" content="Revista PHP" />
+	<meta name="rating" content="General"/>
+	<meta name="author" content="Revista PHP"/>
+	<meta name="language" content="pt-br"/>
+	<meta name="doc-class" content="Completed"/>
+
+	<meta name="doc-rights" content="Public"/>
+	<link rel="shortcut icon" href="http://www.revistaphp.com.br/ico/favicon.ico"/>
+	
+
+	<link rel="stylesheet" type="text/css" href="php_files/artigos.css">
+
+	<link rel="stylesheet" type="text/css" href="style/artigo.css">
+
+    <style type="text/css">
+<!--
+.style1 {color: #FF6600}
+.style3 {color: #000033}
+.style2 {color: #FF6600}
+.style4 {color: #F0F0F0}
+.style5 {color: #669900}
+#Layer2 {
+	position:absolute;
+	left:16px;
+	top:147px;
+	width:565px;
+	height:27px;
+	z-index:2;
+}
+
+-->
+    </style>
+    <script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+    </script>
+</head><body>
+	
+	<div id="web">
+<SCRIPT>
+//Verificar se a resolução vídeo for > 800 X 600
+if(screen.width > 800)
+{
+	document.write ('<div style="display: block;" id="barradireita" >');
+	document.write ('<div class="BarraBox" >');
+	document.write ('<h2><a href="http://www.revistaphp.com.br/"><span>Revista PHP</span></a></h2>');
+	document.write ('<ul><li>')
+	document.write ('<iframe name="topo" width="160" height="600" src="barra1.php" framespacing="0" frameborder="no" scrolling="no"  allowtransparency="true" marginwidth="0" marginheight="0">')
+	document.write ('</iframe>')
+	document.write ('</li></ul>')
+	document.write ('</div>');
+	document.write ('</div>');
+}
+
+</SCRIPT> 
+	 <div id="publicidade">
+	  <a href="http://groups.google.com.br/group/listaphp" target="_blank"><img src="imgs/publicidade/listaphp.gif" width="728" height="90" border="0" /></a>
+</div>
+<div id="toporevista">
+			<a href="index.php" id="logo"><img src="imgs/topo/logo.gif" alt="Revista PHP" width="246" height="93" border="0" img=""></a>
+			<a href="index.php" id="banner"><img src="imgs/publicidade/banner120.gif" alt="Revista PHP" onclick="MM_openBrWindow('upload.php','artigo','width=400,height=280')" width="120" height="60" border="0" img=""></a>
+
+			<form method="get" action="artigos_resultado.php" name="form_search" id="buscador">
+				Palavra:&nbsp;&nbsp;&nbsp; 
+				<input name="p" size="38" maxlength="255" style="border:#999999 1px solid" value="" id="sbi" type="text" class="form_search_input">
+				<label> <br />
+				Categoria:
+                <select name="c" class="form_search_select" id="c" style=" width:120px;  border:#999999 1px solid">
+
+				  <option value='0'>Selecione...</option>
+<option value='6'>Acessibilidade</option><option value='2'>AJAX</option><option value='3'>Banco de Dados</option><option value='4'>CSS</option><option value='15'>Frameworks</option><option value='13'>GTK</option><option value='16'>IDEs</option><option value='8'>Java Script</option><option value='17'>Miscelânea </option><option value='10'>MySQL</option><option value='11'>Oracle</option><option value='1'>PHP</option><option value='14'>Segurança</option><option value='7'>Tableless </option><option value='12'>Templates</option><option value='9'>XHTML</option><option value='5'>XML</option>	            </select>
+				</label>
+			  <label>
+					<input type="image" name="buscar" src="php_files/btn-buscar.gif" />
+			  </label>
+			</form>		
+</div><div id="Destaque">
+			<div id="Cabecalho">
+ 	<h2>Revista PHP  /  PHP</h2>
+				
+	            <ul class="submenu">
+		<li class="texto"><strong>Publicado:  09/06/2008</strong></li>
+        <li class="ultimo-lista"><a href="colaborador.php?cduser=175"> Ver todos artigos</a></li>
+</ul>
+					<div id="DestaqueFundo">
+					
+		<div class="DestaqueTexto">
+			<div>
+   	
+   <a href="colaborador.php?cduser=175" class="imagem"><img class="imagem" src='fotos/175.jpg' title='Ricardo Martins' width="65" height="75" border='0'></a>				
+	<h3>Ricardo Martins</h3>
+	<p class='descricao-corta'>Pós graduado em Tecnologia e Sistemas da informação, Ricardo é desenvolvedor de sistemas web e estuda oportunidades que envolvem tecnologia e sistemas de informação. Trabalha com tecnologia desde 1997, e há mais de 5 anos com desenvolvimento. Também escreve o blog do desenvolvedor (http://ricardomartins.info).</p>	
+				
+		  </div>		
+		</div>			
+		</div>			
+	</div>
+			
+	  </div>
+	  
+		<div id="opcoes_artigos">
+		  <div id="interacao">
+		    <ul class="submenu"><script type="text/javascript"><!--
+google_ad_client = "pub-1912416589418666";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al";
+google_ad_channel = "";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "006699";
+google_color_text = "000000";
+google_color_url = "008000";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+            </ul>
+		  </div>
+		</div>
+		
+		<div id="novidades-foro">
+			<div id="novidades">
+				<h2>Otimizando até 90% loops em arrays utilizando o ponteiro interno de memoria do PHP</h2>
+			
+		
+				<div id="novidades-content">
+			    <div class="descricao">
+				Ol&aacute; a todos novamente.<br />
+Hoje vamos falar sobre os m&eacute;todos de loop em arrays no PHP.<br />
+Quando estudava pra certifica&ccedil;&atilde;o da Zend com o livro deles, me deparei com algumas fun&ccedil;&otilde;es que ainda n&atilde;o conhecia (h&aacute; uns 6 meses atr&aacute;s).<br />
+Achei interessante, e hoje resolvi fazer um teste que me surpreendeu.<br />
+<br />
+Cheguei a obter uma otimiza&ccedil;&atilde;o de 91% em um loop de um pequeno array que criei para testes. Tudo bem que o m&eacute;todo utilizado para tal conclus&atilde;o n&atilde;o &eacute; o mais seguro, mas se analizarmos bem veremos que a otimiza&ccedil;&atilde;o existe.<br />
+<br />
+Bom, vamos aos loops que j&aacute; conhecemos e os resultados que obtive com o aux&iacute;lio da fun&ccedil;&atilde;o microtime();<br />
+<br />
+Primeiro criei meu array...<br />
+<pre class="php" style="border: 1px solid rgb(208, 208, 208); color: rgb(0, 0, 102); background-color: rgb(240, 240, 240);"><div class="head">PHP</div><ol><li class="li1"><div class="de1"><span class="re0">$myArray</span> = <a target="_blank" href="http://www.php.net/array"><span class="kw3">array</span></a><span class="br0">(</span><span class="st0">'Brazil'</span>,<span class="st0">'Argentina'</span>,<span class="st0">'Paraguai'</span>,<span class="st0">'Peru'</span>,<span class="st0">'China'</span>,<span class="st0">'Estados Unidos'</span>,<span class="st0">'Jap&atilde;o'</span>,<span class="st0">'Venezuela'</span><span class="br0">)</span>;</div></li></ol><div class="foot">www.revistaphp.com.br</div></pre>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Agora um loop nele com o tradicional foreach()...<o:p></o:p></span></p>
+<pre class="php" style="border: 1px solid rgb(208, 208, 208); color: rgb(0, 0, 102); background-color: rgb(240, 240, 240);"><div class="head">PHP</div><ol><li class="li1"><div class="de1"><span class="re0">$t1</span> = <a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">(</span><span class="br0">)</span>;</div></li><li class="li1"><div class="de1"><span class="kw1">foreach</span> <span class="br0">(</span><span class="re0">$myArray</span> <span class="kw1">as</span> <span class="re0">$key</span> =&gt; <span class="re0">$value</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">	<a target="_blank" href="http://www.php.net/echo"><span class="kw3">echo</span></a> <span class="re0">$key</span> . <span class="st0">&quot;=&quot;</span> . <span class="re0">$value</span> .<span class="st0">&quot;&lt;br&gt;<span class="es0">\r</span><span class="es0">\n</span>&quot;</span>;</div></li><li class="li1"><div class="de1"><span class="br0">}</span></div></li><li class="li2"><div class="de2"><a target="_blank" href="http://www.php.net/echo"><span class="kw3">echo</span></a> <span class="st0">&quot;Microtime: &quot;</span> . <span class="br0">(</span><a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">(</span><span class="br0">)</span> - <span class="re0">$t1</span><span class="br0">)</span> . <span class="st0">&quot;&lt;br&gt;&lt;br&gt;<span class="es0">\r</span><span class="es0">\n</span><span class="es0">\r</span><span class="es0">\n</span>&quot;</span>;</div></li></ol><div class="foot">www.revistaphp.com.br</div></pre>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">O microtime obtido foi: 0.00312<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Agora um loop com o for()...<o:p></o:p></span></p>
+<pre class="php" style="border: 1px solid rgb(208, 208, 208); color: rgb(0, 0, 102); background-color: rgb(240, 240, 240);"><div class="head">PHP</div><ol><li class="li1"><div class="de1"><span class="re0">$t1</span> = <a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">(</span><span class="br0">)</span>;</div></li><li class="li1"><div class="de1"><span class="kw1">for</span><span class="br0">(</span><span class="re0">$x</span>=<span class="nu0">0</span>; <span class="re0">$x</span>&lt; <a target="_blank" href="http://www.php.net/count"><span class="kw3">count</span></a><span class="br0">(</span><span class="re0">$myArray</span><span class="br0">)</span>; <span class="re0">$x</span>++<span class="br0">)</span><span class="br0">{</span></div></li><li class="li1"><div class="de1">	<a target="_blank" href="http://www.php.net/echo"><span class="kw3">echo</span></a> <span class="re0">$x</span> . <span class="st0">&quot;=&quot;</span> . <span class="re0">$myArray</span><span class="br0">[</span><span class="re0">$x</span><span class="br0">]</span> . <span class="st0">&quot;&lt;br&gt;<span class="es0">\r</span><span class="es0">\n</span>&quot;</span>;</div></li><li class="li1"><div class="de1"><span class="br0">}</span></div></li><li class="li2"><div class="de2"><a target="_blank" href="http://www.php.net/echo"><span class="kw3">echo</span></a> <span class="st0">&quot;Microtime: &quot;</span> . <span class="br0">(</span><a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">(</span><span class="br0">)</span> - <span class="re0">$t1</span><span class="br0">)</span> . <span class="st0">&quot;&lt;br&gt;&lt;br&gt;<span class="es0">\r</span><span class="es0">\n</span><span class="es0">\r</span><span class="es0">\n</span>&quot;</span>;</div></li></ol><div class="foot">www.revistaphp.com.br</div></pre>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">O microtime com for foi: 0.015497<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">E finalmente, usando as fun&ccedil;&otilde;es nativas do php sem o aux&iacute;lio nem cria&ccedil;&atilde;o de nenhuma vari&aacute;vel adicional:<o:p></o:p></span></p>
+<pre class="php" style="border: 1px solid rgb(208, 208, 208); color: rgb(0, 0, 102); background-color: rgb(240, 240, 240);"><div class="head">PHP</div><ol><li class="li1"><div class="de1"><span class="re0">$t1</span> = <a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">(</span><span class="br0">)</span>;</div></li><li class="li1"><div class="de1"><a target="_blank" href="http://www.php.net/reset"><span class="kw3">reset</span></a><span class="br0">(</span><span class="re0">$myArray</span><span class="br0">)</span>;</div></li><li class="li1"><div class="de1"><span class="kw1">while</span> <span class="br0">(</span><a target="_blank" href="http://www.php.net/key"><span class="kw3">key</span></a><span class="br0">(</span><span class="re0">$myArray</span><span class="br0">)</span> !== <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">	<a target="_blank" href="http://www.php.net/echo"><span class="kw3">echo</span></a> <a target="_blank" href="http://www.php.net/key"><span class="kw3">key</span></a><span class="br0">(</span><span class="re0">$myArray</span><span class="br0">)</span> . <span class="st0">&quot;=&quot;</span> . <a target="_blank" href="http://www.php.net/current"><span class="kw3">current</span></a><span class="br0">(</span><span class="re0">$myArray</span><span class="br0">)</span> . <span class="st0">&quot;&lt;br&gt;<span class="es0">\r</span><span class="es0">\n</span>&quot;</span>;</div></li><li class="li2"><div class="de2">	<a target="_blank" href="http://www.php.net/next"><span class="kw3">next</span></a><span class="br0">(</span><span class="re0">$myArray</span><span class="br0">)</span>;</div></li><li class="li1"><div class="de1"><span class="br0">}</span></div></li><li class="li1"><div class="de1"><a target="_blank" href="http://www.php.net/echo"><span class="kw3">echo</span></a> <span class="st0">&quot;Microtime: &quot;</span> . <span class="br0">(</span><a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">(</span><span class="br0">)</span> - <span class="re0">$t1</span><span class="br0">)</span> . <span class="st0">&quot;&lt;br&gt;&lt;br&gt;<span class="es0">\r</span><span class="es0">\n</span><span class="es0">\r</span><span class="es0">\n</span>&quot;</span>;</div></li></ol><div class="foot">www.revistaphp.com.br</div></pre>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">O microtime foi de: 0.001322 <o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Ou seja, 57,62% melhor que o foreach e 91,46% melhor que o for.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Isso ocorre, entre outros motivos, porque ele n&atilde;o usou nenhuma outra vari&aacute;vel. No for() n&oacute;s criamos a vari&aacute;vel $x e temos que ficar mudando o valor dela o tempo todo, e chamando ela pra especificar o valor da chave que queremos mostrar na repeti&ccedil;&atilde;o.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;"><o:p></o:p>No caso do foreach, criamos duas novas vari&aacute;veis (a $key e a $value).<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><strong><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Entendendo...<o:p></o:p></span></strong></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Com as fun&ccedil;&otilde;es reset(), key(), current(), e next() n&oacute;s n&atilde;o criamos nenhuma vari&aacute;vel nova, e utilizamos fun&ccedil;&otilde;es nativas do PHP para resgatar os valores do nosso array.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Com elas, o PHP utiliza o ponteiro interno de mem&oacute;ria do array, sem a necessidade de criar mais lixo na mem&oacute;ria pra fazer um loop.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">O <strong>reset()</strong> como o nome diz, resetou a posi&ccedil;&atilde;o do cursor para o primeiro valor.<br />
+A fun&ccedil;&atilde;o <strong>key()</strong> retorna a chave do array na posi&ccedil;&atilde;o atual do ponteiro de mem&oacute;ria interno, mas retorna null caso o array tenha chegado ao fim.<br />
+O <strong>next()</strong> como o nome diz, move o ponteiro interno para a pr&oacute;xima posi&ccedil;&atilde;o. Temos tamb&eacute;m a fun&ccedil;&atilde;o <strong>prev()</strong> que faz o inverso.<br />
+A fun&ccedil;&atilde;o <strong>current()</strong> mostrar&aacute; o valor da posi&ccedil;&atilde;o atual do array.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;"><o:p></o:p>Enfim, embora o c&oacute;digo fique maior e um pouco mais confuso dependendo doa complexidade do array, poder&aacute; lhe dar um desempenho muito melhor no caso de arrays gigantes.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Aproveitem a t&eacute;cnica.<o:p></o:p></span></p>
+<p class="MsoNormal" style=""><span style="font-family: &quot;Tahoma&quot;,&quot;sans-serif&quot;;">Um grande abra&ccedil;o e at&eacute; a pr&oacute;xima.<o:p></o:p></span></p> </div></div>																																																																										
+			</div>
+			
+		</div>
+		
+		
+		<div id="opcoes_artigos">
+		  <div id="interacao">
+				<h2 align="left">Op&ccedil;&otilde;es de Intera&ccedil;&atilde;o </h2>
+				
+                <div align="center">
+                  <ul class="submenu">	
+                            <div align="left"><img src="imgs/artigos/comentar.gif" style="cursor:pointer" title="Comentar" width="100" height="21" onclick="MM_openBrWindow('pop_comentar.php?id=192','comentario','width=420,height=220')" />
+                              <span class="activa"><img src="imgs/artigos/colunista.gif" onclick="MM_openBrWindow('popups/colunista.php?c=175','colunista','width=400,height=200')" title="Fale com o colunista" style="cursor:pointer" width="165" height="21" /> </span><span class="activa"><img src="imgs/artigos/indicar.gif" onclick="MM_openBrWindow('popups/indicacao.php?id=192','colunista','width=400,height=200')" title="Indicar artigo" width="120" height="21" /></span> <a href="print.php?id=192" target="_blank"><img src="imgs/artigos/imprimir.gif" style="cursor:pointer" title="Versão de impressão" width="90" height="21" /></a> <a href="http://groups.google.com.br/group/listaphp" target="_blank"><img src="imgs/artigos/duvidas.gif" title="Lista PHP Google" width="90" height="21" /></a> 
+							   
+							   <img src="imgs/artigos/favoritos.gif" style="cursor:pointer" title="Adicionar aos Favoritos" width="150" height="21" onclick="MM_openBrWindow('pop_favoritos.php?id=192&acao=add','favoritos','width=420,height=220')" />
+							  							  </div>
+                            <li class="activa"></li>
+<li class="activa">&nbsp;</li>
+</ul>
+            </div>
+              <ul class="submenu">
+            </ul>
+		  </div>
+		</div>
+	<div id="novidades-foro">
+			<div id="novidades">
+				<h2>Coment&aacute;rios</h2>
+				
+	            <ul class="submenu">	
+		<li class="activa"><a  style="cursor:pointer" onclick="MM_openBrWindow('pop_comentar.php?id=192','comentario','width=420,height=220')">Incluir Coment&aacute;rio  </a></li>
+<li class="ultimo-lista"><a href="#"> Ver todos </a></li>
+<li class="activa"></li></ul>
+		
+				<div id="novidades-content">
+			    <div class="descricao">
+				  				    
+			              <div class="style1" id="comentarios_tiluto">
+		                  Vamos lá...				  </div>
+				        <div id="comentarios_nome"><span class="style2">
+			            Por: </span><span class="style3">Ricardo</span>, 
+				          22/12/2009&nbsp;&nbsp;&nbsp;09:05:53</div>
+				        <div id="comentarios_texto">
+			            Nesses 18 meses desde que publiquei o post, vi vários comentários e nunca consegui responde-los.<br />
+O que me inspirou a escrever este artigo foi o Zend Study Guide (livro de referencia para quem quer tirar a certificação ZCE).<br />
+No livro ele explica que o foreach faz uma copia do array, o que significa que quando o array é modificado dentro do loop, ele não é alterado durante a iteração. Por exemplo, quando remove um item do array depois que o loop começou nao fará o loop pular aquele item/elemento.<br />
+<br />
+Aqui vai um pequeno trecho sobre o uso de key():<br />
+&quot;The pointer is, in fact, a handyway ofmaintaining the iterative state of an array without<br />
+needing an external variable to do the job for us.<br />
+The most direct way of manipulating the pointer of an array is by using a series<br />
+of functions designed specifically for this purpose. Upon starting an iteration over<br />
+an array, the first step is usually to reset the pointer to its initial position using the<br />
+reset() function; after that, we can move forward or backwards by one position by<br />
+using prev() and next() respectively. At any given point, we can access the value of<br />
+the current element using current() and its key using key().&quot;<br />
+<br />
+Com relação ao ultimo comentario do George, é perfeitamente válido no caso do foreach. Na ocasião que escrevi a matéria não havia pensado em fazer deste jeito, mas já vi palestras que mencionavam tal técnica.<br />
+<br />
+Não fiz profilling com os metodos demonstrados, nem o testei com arrays gigantescos, mas acredito que pra quem tiver paciência de manipular diretamente o array, terá uma melhora de performance significativa.<br />
+<br />
+Espero ter esclarecido um pouco mais. Não deixem de comentar.<br />
+<br />
+Obrigado.			  
+						</div>				    
+			        
+			              <div class="style1" id="comentarios_tiluto">
+		                  Nem tanto...				  </div>
+				        <div id="comentarios_nome"><span class="style2">
+			            Por: </span><span class="style3">George</span>, 
+				          22/12/2009&nbsp;&nbsp;&nbsp;08:32:32</div>
+				        <div id="comentarios_texto">
+			            Como comentado por outros, o foreach() prevalece em performance e usabilidade em casos maiores. Com relação ao for(), o seu loop realmente não apresenta um resultado satisfatório pois não foi escrito visando a otimização. Repare que, cada vez que o parser verificar a condição de saída do laço ('count($myArray)'), é gerado um processamento totalmente desnecessário, pois este valor não será alterado. Nestes casos, utilize uma variável que tenha como valor o total de elementos do array ($y = count($myArray)). Desta forma o laço será feito através da comparação entre valores inteiros, o que otimizará muito seu benchmark. <br />
+<br />
+George			  
+						</div>				    
+			        
+			              <div class="style1" id="comentarios_tiluto">
+		                  Faça diferente				  </div>
+				        <div id="comentarios_nome"><span class="style2">
+			            Por: </span><span class="style3">William</span>, 
+				          30/11/2009&nbsp;&nbsp;&nbsp;08:34:33</div>
+				        <div id="comentarios_texto">
+			            Gostei do teste, mas para uma visão mais ampla eu repeti o seu teste  com um array um pouco maior, 133.055 indices, o resultado foi totalmente diferente. O foreach teve um desempenhor melhor, seguido pelo for e por ultimo foi o while. Acho que para grandes quantidades de dados o foreach prevalece			  
+						</div>				    
+			        
+			              <div class="style1" id="comentarios_tiluto">
+		                  Gostei muito				  </div>
+				        <div id="comentarios_nome"><span class="style2">
+			            Por: </span><span class="style3">Gabriel</span>, 
+				          24/08/2009&nbsp;&nbsp;&nbsp;14:39:35</div>
+				        <div id="comentarios_texto">
+			            É muito bom saber sobre qualquer coisa que pode nos trazer melhoramentos no desempenho, mesmo que este pareça mínimo em uma aplicação de grande porte pode fazer diferença.			  
+						</div>				    
+			        
+			              <div class="style1" id="comentarios_tiluto">
+		                  Também não concordo!				  </div>
+				        <div id="comentarios_nome"><span class="style2">
+			            Por: </span><span class="style3">Nylson</span>, 
+				          15/07/2009&nbsp;&nbsp;&nbsp;10:31:52</div>
+				        <div id="comentarios_texto">
+			            Se você for analizar, não há enorme vantagem em se utilizar o loop dessa forma, já que no seu último exmplo se você analizar melhor, existe key($myArray), o PHP leva um tempo pra calcular isso! OK! Ae depois você REPETE isto! echo key($myArray).&quot;-&quot;...<br />
+<br />
+Nesse caso, como só foi feita uma requisição ao calculo do key do Array dentro do laço, o tempo realmente foi mais vantajoso do que o do foreach, mas como a fução do PHP foreach, já lança os valores de key() e current() em váriaves, em um contexto maior não seria nada legal chamar as funções várias vezes! Já que dificilmente utilizaremos um loop e não trataremos os valores dentro deles, requisitando até mais vezes a função key() dentro do próprio while.<br />
+<br />
+Sou mais o bom e velho foreach!			  
+						</div>				    
+			        
+			              <div class="style1" id="comentarios_tiluto">
+		                  Não concordo!				  </div>
+				        <div id="comentarios_nome"><span class="style2">
+			            Por: </span><span class="style3">Rafael</span>, 
+				          04/02/2009&nbsp;&nbsp;&nbsp;11:44:24</div>
+				        <div id="comentarios_texto">
+			            Isso na verdade é facultativo, dependendo do que for requirido no laço, pode ser atribuido pelo foreach, neste caso ficou mais rápido pois você utilizou o loop somente para executar um &quot;Echo&quot; e não utilizou nem o indice, nem os valores mais doque uma vez, isso é melhor com o while, porém se for utilizar os indices ou keys varias vezes dentro deste foreach não precisa declarar as variáveis novamente, e se utilizar as funções de array do PHP mais de uma vez, o seu loop se tornará mais lento.			  
+						</div>				    
+			        
+			              <div class="style1" id="comentarios_tiluto">
+		                  Muito Bom...				  </div>
+				        <div id="comentarios_nome"><span class="style2">
+			            Por: </span><span class="style3">Manoel</span>, 
+				          10/06/2008&nbsp;&nbsp;&nbsp;01:58:44</div>
+				        <div id="comentarios_texto">
+			            Apesar de como citado anteriormente os testes de velocidades não serem confiáveis é uma boa analisarmos toda e qualquer vantagem de desempenho em nossos sistemas web, principalmente se tratando de sistemas de empresas que são disponíveis via extranet.			  
+						</div>				    
+			        			      </div>
+				</div>																																																																										
+			</div>
+			
+	  </div>
+	  <div id="final"><a href="index.php"><img src="imgs/topo/logo.gif" width="246" height="93" border="0" /></a>
+</div>
+		
+</div>
+	<script src="php_files/urchin.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		_uacct = "UA-313498-1";
+		urchinTracker();
+	</script>
+</body></html>

@@ -1,0 +1,389 @@
+/*******************************************************************
+********************************************************************
+  Nome: cPgFinalizarCompra.css
+  Função: página css da pgFinalizarCompra.php
+  Data de Criação: 22/02/2011 - 10:06
+  Data de Atualização: -
+  Desenvolvido por: Jonas
+********************************************************************
+********************************************************************/
+
+html, body {
+    height: 100%;
+}
+
+
+.divFinCompCabecalho{
+    float:left;
+    width: 100%;
+    height: 20%;
+    border: 1px solid;
+}
+
+
+.divFinCompLateralEsquerda{
+    float:left;
+    width: 15%;
+    height: 78%;
+    border: 1px solid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.divFinCompConteudo{
+    float:left;
+    width: 84%;
+    height: 78%;
+    border: 1px solid;
+}
+
+
+.divFinCompPasso{
+    float:left;
+    width: 100%;
+    height: 90%;
+    border: 1px solid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+#divFinCompPasso0, #divFinCompPasso1{
+   display: block;
+}
+
+
+#divFinCompPasso2, #divFinCompPasso3, #divFinCompPasso4{
+   display: none;
+}
+
+
+.divFinCompNavegaPassoPasso{
+    float:left;
+    width: 100%;
+    height: 9%;
+    border: 1px solid;
+}
+
+
+.lnkAlterarPassoFinComp{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+.divPassoPasso{
+    float:left;
+    background-color: #d0dafd;
+    width: 19%;
+    height: 100%;
+    border: 1px solid;
+}
+.divPassoPasso:hover{
+    background-color: #AAA;
+}
+
+
+.divFinCompConteudoBranco{
+    float:left;
+    width: 100%;
+    height: 78%;
+    border: 1px solid;
+}
+
+.divCadUsuarioBotoes{
+    border: 0px solid;
+    margin-left: 5px;
+    width: 95%;
+    height: 8%;
+    display: table;
+}
+
+
+/* imagens dos produtos comprados. Exibidos na div 'divFinCompLateralEsquerda' */
+.imgProdutoComprado{
+    float: left;
+    display: block;
+    width: 120px;
+    height: 150px;
+    border: 1px solid;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/* PASSO 0 - Realizar Login */
+.divLoginUsuario{
+    display: table;
+    border: 1px solid;
+    margin-left: 5px;
+    width: 95%;
+    height: 8%;
+}
+
+
+/* fim - PASSO 0 - Realizar Login */
+
+/*div para recuperar senha*/
+#conteudo{
+	border:1px solid #CCCC33;
+	padding:10px;
+	margin-top:10px;
+	width:500px;
+    z-index: 9;
+}
+
+
+/*recuperar senha*/
+.spnTituloEsqueciMinhaSenha{
+    display: block;
+    border: 0px solid;
+    margin-left: 10px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+
+.spnTituloOpcRecuperarSenha{
+    width: 40px;
+    border: 0px solid;
+    margin-left: 10px;
+    margin-top: 12px;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: 700;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+
+.txtValorOpcRecuperarSenha{
+    background:transparent;
+    width: 80px;
+    margin-left: 2px;
+    font-size: 12px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: lowercase;
+}
+
+#txtValorOpcRecuperarSenhaLogin{
+    width: 200px;
+}
+
+#txtValorOpcRecuperarSenhaEmail{
+    width: 500px;
+}
+
+
+.btnRecuperarSenha{
+    float: left;
+    background: url('./figuras/up.png') no-repeat top left;
+    /*border: none;*/
+    border: 1px solid;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+/*    padding: 2px 8px;*/
+}
+.btnRecuperarSenha:hover {
+    float: left;
+    background: url('./figuras/down.png') no-repeat top left;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+/*    padding: 2px 8px;*/
+}
+
+
+.imgRecuperarSenhaProcessando{
+    display: none;
+    margin-left: 130px;
+    margin-top: 12px;
+}
+
+.fsetOpcoes{
+    font-size: 14px;
+    font-family: Arial, Verdana, Trebuchet, sans-serif;
+    font-weight: bold;
+}
+
+/*fim - recuperar senha*/
+
+
+/* PASSO 1 - Confirmar Produtos */
+/*table 'tblMinhasCompras'*/
+#tblMinhasCompras{
+    width: 100%;
+    margin: 0px;
+    font-family: Times, Georgia, serif;
+    font-size: 12px;
+    text-align: center;
+    /*border-collapse: collapse;*/
+    border: 1px solid;
+}
+
+#tblMinhasCompras th{
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#tblMinhasCompras td{
+    background: #e8edff;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #fff;
+    border: 1px;
+    color: #669;
+    padding: 8px;
+}
+
+#tblMinhasCompras tr:hover td{
+    background: #d0dafd;
+    color: #339;
+}
+/*fim - table 'tblMinhasCompras'*/
+
+.spnValorTotal{
+    display: block;
+    margin: 10px;
+    color: #039;
+    font-family: Times, Georgia, serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+/* fim - PASSO 1 - Confirmar Produtos */
+
+
+/* PASSO 2 - Endereço de Entrega */
+.spnTituloDivPasso{
+    float: left;
+    width: 100%;
+    border: 0px;
+    margin-top: 1%;
+    text-align: center;
+    font-size: 18px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.lblTituloEnderecoEntrega{
+    float: left;
+    width: 130px;
+    border: 0px;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+
+label.error {
+    display: inline-block;
+    margin-left: 5px;
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.txtValorEnderecoEntrega{
+    margin-left: 5px;
+    font-size: 16px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+#txtValorEnderecoEntregaUF{
+    width: 4%;
+    text-transform: uppercase;
+}
+#txtValorEnderecoEntregaCidade{
+    width: 45%;
+}
+#txtValorEnderecoEntregaCEP{
+    float: left;
+    width: 10%;
+}
+#txtValorEnderecoEntregaBairro{
+    width: 45%;
+}
+#txtValorEnderecoEntregaRua{
+    width: 45%;
+}
+#txtValorEnderecoEntregaNumero{
+    width: 10%;
+}
+#txtAreaValorEnderecoEntregaComplemento{
+    margin-left: 5px;
+    width: 50%;
+    height: 5%;
+}
+
+#ckBxEnderecoPadrao{
+    margin-left: 5px;
+    margin-top: 8px;
+}
+
+/* necessário em função da linha do CEP */
+.divLinhaEndEntrega{
+  display: block;
+  float: left;
+  border: 0px;
+  width: 100%;
+  margin: 0;
+}
+
+.lnkBuscarCEP{
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 10px;
+    font-family: Verdana, Arial, Trebuchet, sans-serif;
+}
+.lnkBuscarCEP:link, .lnkBuscarCEP:visited, .lnkBuscarCEP:active{
+    text-decoration: none;
+}
+.lnkBuscarCEP:hover{
+    text-decoration: underline;
+    color: #FF0000;
+}
+
+.imgProcessandoSalvarEndEntrega{
+    float: left;
+    display: none;
+    margin-left: 5%;
+}
+
+.spnInformacaoSalvouEndEntrega{
+    float: left;
+    display: none;
+    margin-left: 5%;
+    color: green;
+    font-size: 12px;
+    font-family: Trebuchet, Verdana, Arial, sans-serif;
+    font-style: italic;
+}
+
+/* fim - PASSO 2 - Endereço de Entrega */

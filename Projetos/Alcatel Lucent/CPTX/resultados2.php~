@@ -1,0 +1,105 @@
+<?php session_start(); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- European format dd-mm-yyyy -->
+<script language="JavaScript" src="calendar\calendar1.js"></script><!-- Date only with year scrolling -->
+<!-- American format mm/dd/yyyy -->
+<script language="JavaScript" src="calendar\calendar2.js"></script><!-- Date only with year scrolling -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style3 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+-->
+</style>
+</head>
+
+<body>
+<p align="center" class="style2">Visualização de ARS</p>
+<form name="form_res" action="update_dat.php?ars=<?php echo $_GET['ars']; ?>" method="post">
+<table width="50%" border="0" align="center" cellpadding="0" cellspacing="4" class='style1'>
+<?php
+
+mysql_connect("localhost","root","brasil");
+mysql_select_db("ars");
+
+$query = mysql_query("SELECT* FROM `tabela` WHERE ars = '$_GET[ars]'");
+
+while ($row = mysql_fetch_array($query)) {
+list($data) = explode(" ",$row['data']);
+echo "
+  <tr>
+    <td width='100px' class='style1'><div align='right'>ARS:</div></td>
+    <td width='600px'>$row[ars]</td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>Data Inicial:</div></td>
+    <td>$data</td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>Data Final:</div></td>
+    <td><label>
+	<input type='text' size='6' name='n_dat' id='n_dat' onFocus=\"this.style.background='#B1EBFE';\" onBlur=\"this.style.background='#ffffff';\">
+<a href=\"javascript:cal1.popup();\"><img src=\"calendar/img/cal.gif\" width='16' height='16' border='0' alt=\"Clique aqui para selecionar uma data\"></a>
+            </label><a href='#'><img src=\"imagens/icon_limpar.gif\" width='16' height='16' border='0' alt='Apagar data' onClick=\"document.forms['form_res'].n_dat.value=''\" /></a></td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>BA:</div></td>
+    <td>$row[ba]</td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>Circuito:</div></td>
+    <td>$row[circuito]</td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>ID:</div></td>
+    <td>$row[id]</td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>Equipamento:</div></td>
+    <td>$row[equipamento]</td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>Tarefa:</div></td>
+    <td>$row[tarefa]</td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>Descri&ccedil;&atilde;o:</div></td>
+    <td>$row[descricao]</td>
+  </tr>
+  <tr>
+    <td class='style1'><div align='right'>Solicitante:</div></td>
+    <td>$row[solicitante]</td>
+  </tr>
+  <tr height='35px' valign='bottom'>
+	<td colspan='2' align='center' class='style1'><input onCLick='javascript: document.form_res.n_dat.disabled = 0;' type='submit' value='Registrar'></td>
+  </tr>";
+}
+?>
+</table>
+</form>
+			<script language="JavaScript">
+				 // create calendar object(s) just after form tag closed
+				 // specify form element as the only parameter (document.forms['formname'].elements['inputname']);
+				 // note: you can have as many calendar objects as you need for your application
+				document.form_res.n_dat.disabled = 1;
+				var cal1 = new calendar1(document.forms['form_res'].elements['n_dat']);
+				cal1.year_scroll = true;
+				cal1.time_comp = false;
+
+			</script>
+
+</body>
+</html>

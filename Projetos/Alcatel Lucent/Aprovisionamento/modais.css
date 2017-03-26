@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+
+.modal {
+	display:none;
+	position:absolute;
+	background-color:#DDD;
+	border:solid 1px;
+	border-color:#CCC #666 #666 #CCC;
+	z-index:10;
+}
+.modal div.intern{
+	margin:5px;
+	background:#F0F1F2;
+	border:solid 1px #CCC;
+}
+.modal div.header{
+	position:relative;
+	padding:5px;
+	height:20px;
+	font-size:13px;
+	font-weight:bold;
+	background:url(../imgs/modal-header-bg.gif) repeat-x;
+	border-bottom:solid 1px #CCC;
+	cursor:move;
+}
+.modal div.header span{
+	font-size:13px;
+	font-weight:bold;
+}
+.modal a.close{
+	position:absolute;
+	display:block;
+	height:20px;
+	width:20px;
+	top:4px;
+	right:5px;
+
+	border:solid 1px #CCC;
+	background:url(../imgs/buttons/btn-bg.gif) repeat-x;
+
+	text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	color:#333;
+	text-decoration:none;
+}
+.modal div.container{
+	margin:10px;
+}
+
+.modal .divButtons {
+	clear:both;
+	text-align:center;
+	margin:10px 0 10px 0;
+}
+.modal .divButtons input{
+	margin-right:10px;
+}
+.modal .extra-buttons {
+	clear:both;
+	text-align:center;
+	margin:10px 0 10px 0;
+}
+.modal .extra-buttons input{
+	margin-right:10px;
+}
+
+.modal-waiting {
+	position:absolute;
+	background-color: #666;
+	text-align:center;
+	z-index:120;
+	filter:alpha(opacity=30);
+	-moz-opacity:.30;
+	opacity:.30;
+}
+.front{
+	z-index:1001!important;
+}
+.modal div.container .text strong{
+	font-weight:bold;
+}
+.modal div.container .text h4{
+	font-size:13px;
+	font-weight:bold;
+	color:#369;
+}
+.modal div.container .text .divider{
+	width:100%!important;
+}
+/*
+.modal div.container .text p{
+ 	line-height:18px;
+}
+ SOMBRAS
+.modal .shadow {
+	background-color:#666;
+	position:absolute;
+	filter:alpha(opacity=25);
+	-moz-opacity:.25;
+	opacity:.25;
+}
+.modal #shadowRight{
+	width:8px;
+	height:100%;
+	top:5px;
+	right:-9px;
+
+}
+.modal #shadowBottom{
+	width:100%;
+	height:8px;
+	bottom:-9px;
+	left:5px;
+
+	IE 6 HACK
+	line-height:8px;
+	font-size:0px;
+}
+*/
